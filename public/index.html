@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Belditalk.com — Learn Moroccan Darija Online</title>
+  <meta name="description" content="Master Moroccan Darija with native-speaker guidance. 197-page e-book, live Zoom sessions, and a free global community. Start speaking like a local today." />
+  <meta name="keywords" content="Moroccan Darija, learn Darija, Moroccan Arabic, Morocco language, Darija lessons, Belditalk" />
+  <meta name="author" content="Elias Lamseyah" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Belditalk.com — Learn Moroccan Darija Online" />
+  <meta property="og:description" content="Master Morocco's language and culture with native-speaker guidance, interactive lessons, and a global community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://belditalk.com" />
+  <meta property="og:image" content="images/logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Belditalk.com — Learn Moroccan Darija" />
+  <meta name="twitter:description" content="Master Morocco's language with the I ❤️ Moroccan Darija e-book, live sessions, and free community." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =========================================================
+       CSS CUSTOM PROPERTIES
+    ========================================================= */
+    :root {
+      --primary:   #C75B2F;
+      --secondary: #1B4965;
+      --accent:    #D4A24E;
+      --success:   #2D6A4F;
+      --light:     #FDF6EC;
+      --dark:      #1A1A2E;
+      --text:      #2D3436;
+      --text-muted:#636e72;
+      --white:     #ffffff;
+      --border:    rgba(196,91,47,0.15);
+
+      --font-head: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 40px;
+
+      --shadow-sm: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow-md: 0 8px 32px rgba(0,0,0,0.12);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.18);
+
+      --section-pad: 100px 0;
+      --container:   1160px;
+    }
+
+    /* =========================================================
+       RESET & BASE
+    ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* =========================================================
+       UTILITY
+    ========================================================= */
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section { padding: var(--section-pad); }
+    .section--light { background: var(--light); }
+    .section--dark  { background: var(--dark); color: var(--white); }
+    .section--blue  { background: var(--secondary); color: var(--white); }
+
+    .section-label {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .section--dark  .section-label,
+    .section--blue  .section-label { color: var(--accent); }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 560px;
+    }
+    .section--dark .section-sub,
+    .section--blue .section-sub { color: rgba(255,255,255,0.7); }
+
+    .text-center { text-align: center; }
+    .text-center .section-sub { margin: 0 auto; }
+
+    /* =========================================================
+       SCROLL-REVEAL ANIMATIONS
+    ========================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* =========================================================
+       ZELLIGE SVG PATTERNS (reusable background)
+    ========================================================= */
+    .zellige-bg {
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C75B2F' stroke-width='1'%3E%3Cpolygon points='40,4 56,20 56,60 40,76 24,60 24,20'/%3E%3Cpolygon points='40,14 50,24 50,56 40,66 30,56 30,24'/%3E%3Cline x1='40' y1='4' x2='40' y2='14'/%3E%3Cline x1='56' y1='20' x2='50' y2='24'/%3E%3Cline x1='56' y1='60' x2='50' y2='56'/%3E%3Cline x1='40' y1='76' x2='40' y2='66'/%3E%3Cline x1='24' y1='60' x2='30' y2='56'/%3E%3Cline x1='24' y1='20' x2='30' y2='24'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+    .zellige-bg--gold {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23D4A24E' stroke-width='0.8'%3E%3Crect x='10' y='10' width='40' height='40' transform='rotate(45 30 30)'/%3E%3Crect x='18' y='18' width='24' height='24' transform='rotate(45 30 30)'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 60px 60px;
+    }
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(199,91,47,0.4);
+    }
+    .btn-primary:hover {
+      background: #b34d24;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(199,91,47,0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.7);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: var(--secondary);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(27,73,101,0.35);
+    }
+    .btn-secondary:hover {
+      background: #163d56;
+      transform: translateY(-2px);
+    }
+    .btn-accent {
+      background: var(--accent);
+      color: var(--dark);
+      box-shadow: 0 4px 20px rgba(212,162,78,0.4);
+    }
+    .btn-accent:hover {
+      background: #c4923e;
+      transform: translateY(-2px);
+    }
+    .btn-lg { padding: 18px 36px; font-size: 1.05rem; }
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+    #navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: all 0.4s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(26,26,46,0.96);
+      backdrop-filter: blur(12px);
+      padding: 12px 0;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+    .nav-logo-text {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+    .nav-logo-text span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta { display: flex; align-items: center; gap: 12px; }
+    .nav-cta .btn { padding: 10px 22px; font-size: 0.88rem; }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: rgba(26,26,46,0.98);
+      backdrop-filter: blur(16px);
+      padding: 24px;
+      gap: 16px;
+      z-index: 999;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile a {
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-mobile .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--dark) 0%, #0d2b40 50%, #1a1a2e 100%);
+      overflow: hidden;
+      text-align: center;
+      padding: 120px 24px 80px;
+    }
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.07;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23D4A24E' stroke-width='0.8'%3E%3Cpolygon points='50,5 68,25 68,75 50,95 32,75 32,25'/%3E%3Cpolygon points='50,18 62,30 62,70 50,82 38,70 38,30'/%3E%3Cline x1='50' y1='5' x2='50' y2='18'/%3E%3Cline x1='68' y1='25' x2='62' y2='30'/%3E%3Cline x1='68' y1='75' x2='62' y2='70'/%3E%3Cline x1='50' y1='95' x2='50' y2='82'/%3E%3Cline x1='32' y1='75' x2='38' y2='70'/%3E%3Cline x1='32' y1='25' x2='38' y2='30'/%3E%3Ccircle cx='50' cy='50' r='6'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 100px 100px;
+      pointer-events: none;
+    }
+
+    /* Decorative geometric shapes */
+    .hero-geo {
+      position: absolute;
+      pointer-events: none;
+    }
+    .hero-geo-1 {
+      top: 10%; right: 8%;
+      width: 180px; height: 180px;
+      opacity: 0.12;
+    }
+    .hero-geo-2 {
+      bottom: 12%; left: 5%;
+      width: 140px; height: 140px;
+      opacity: 0.1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+    }
+    .hero-logo {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      margin: 0 auto 28px;
+      filter: drop-shadow(0 8px 24px rgba(212,162,78,0.4));
+      animation: floatLogo 4s ease-in-out infinite;
+    }
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212,162,78,0.15);
+      border: 1px solid rgba(212,162,78,0.4);
+      color: var(--accent);
+      font-family: var(--font-head);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(1.5); }
+    }
+
+    .hero-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero-title .highlight {
+      color: transparent;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.72);
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat-num {
+      font-family: var(--font-head);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--accent);
+      display: block;
+    }
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-stat-divider {
+      width: 1px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      animation: scrollBounce 2.4s ease-in-out infinite;
+    }
+    .scroll-mouse {
+      width: 22px; height: 34px;
+      border: 2px solid rgba(255,255,255,0.25);
+      border-radius: 11px;
+      position: relative;
+    }
+    .scroll-mouse::after {
+      content: '';
+      position: absolute;
+      top: 5px; left: 50%;
+      transform: translateX(-50%);
+      width: 3px; height: 6px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 2px;
+      animation: scrollDot 2s ease-in-out infinite;
+    }
+    @keyframes scrollDot {
+      0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+      100%      { transform: translateX(-50%) translateY(12px); opacity: 0; }
+    }
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* Word of the Day Widget */
+    .wotd {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      padding: 12px 20px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(8px);
+    }
+    .wotd-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .wotd-body { text-align: left; }
+    .wotd-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+    }
+    .wotd-word {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .wotd-translation {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* =========================================================
+       ABOUT / WHY DARIJA
+    ========================================================= */
+    #about { position: relative; overflow: hidden; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .about-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .about-card:hover {
+      transform: translateX(6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .about-card-icon {
+      width: 52px; height: 52px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .about-card-icon--orange { background: rgba(199,91,47,0.1); }
+    .about-card-icon--blue   { background: rgba(27,73,101,0.1); }
+    .about-card-icon--green  { background: rgba(45,106,79,0.1); }
+    .about-card h3 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .about-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+    .about-text { }
+    .about-text .section-title { margin-bottom: 20px; }
+    .about-story {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+    .about-story strong { color: var(--text); }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .about-stat {
+      background: var(--light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    .about-stat-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--primary);
+      display: block;
+    }
+    .about-stat-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* =========================================================
+       WHAT YOU GET
+    ========================================================= */
+    #offerings { position: relative; overflow: hidden; }
+    .offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 56px;
+    }
+    .offering-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .offering-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(212,162,78,0.3);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.3);
+    }
+    .offering-card--featured {
+      border-color: rgba(212,162,78,0.5);
+      background: rgba(212,162,78,0.06);
+    }
+    .offering-card--featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: 20px; right: -32px;
+      background: linear-gradient(90deg, var(--accent), var(--primary));
+      color: var(--dark);
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 48px;
+      transform: rotate(45deg);
+    }
+
+    .offering-icon {
+      width: 64px; height: 64px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+    }
+    .offering-icon--book  { background: rgba(199,91,47,0.2); }
+    .offering-icon--video { background: rgba(27,73,101,0.2); }
+    .offering-icon--comm  { background: rgba(45,106,79,0.2); }
+
+    .offering-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .offering-card .offering-subtitle {
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .offering-card p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .offering-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .offering-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+    }
+    .offering-feature::before {
+      content: '✓';
+      width: 20px; height: 20px;
+      background: rgba(212,162,78,0.2);
+      color: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 900px) {
+      .offerings-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+    }
+
+    /* =========================================================
+       CURRICULUM
+    ========================================================= */
+    #curriculum { position: relative; overflow: hidden; }
+    .curriculum-header { margin-bottom: 48px; }
+    .curriculum-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .curriculum-tab {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 24px;
+      border-radius: 50px;
+      border: 2px solid var(--border);
+      color: var(--text-muted);
+      transition: all 0.3s;
+      background: transparent;
+    }
+    .curriculum-tab.active,
+    .curriculum-tab:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+    .curriculum-panel { display: none; }
+    .curriculum-panel.active { display: block; }
+
+    .curriculum-modules {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .module-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .module-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .module-num {
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .module-card h4 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .module-bullets {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .module-bullet {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding-left: 16px;
+      position: relative;
+    }
+    .module-bullet::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+    .curriculum-note {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 16px;
+      background: var(--light);
+      border-radius: var(--radius-md);
+      border: 1px dashed var(--border);
+    }
+    .curriculum-note strong { color: var(--primary); }
+
+    @media (max-width: 700px) {
+      .curriculum-modules { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================================
+       PRICING
+    ========================================================= */
+    #pricing {
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 56px;
+    }
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 56px 48px;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+    }
+    .pricing-tag {
+      display: inline-block;
+      background: rgba(199,91,47,0.1);
+      color: var(--primary);
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .pricing-title {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .pricing-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .pricing-price {
+      margin-bottom: 8px;
+    }
+    .price-amount {
+      font-family: var(--font-head);
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1;
+    }
+    .price-amount sup {
+      font-size: 1.5rem;
+      vertical-align: super;
+      color: var(--primary);
+    }
+    .price-was {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+      margin-left: 8px;
+    }
+    .price-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+    }
+    .pricing-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+    .pricing-features {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .pricing-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+    .pricing-feature-check {
+      width: 24px; height: 24px;
+      background: rgba(45,106,79,0.12);
+      color: var(--success);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .pricing-cta {
+      width: 100%;
+      justify-content: center;
+      font-size: 1.1rem;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+    .pricing-guarantee {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .pricing-guarantee span { font-size: 1.1rem; }
+
+    @media (max-width: 560px) {
+      .pricing-card { padding: 40px 24px; }
+      .price-amount { font-size: 3rem; }
+    }
+
+    /* =========================================================
+       TESTIMONIALS
+    ========================================================= */
+    #testimonials { position: relative; overflow: hidden; }
+    .testimonials-header { margin-bottom: 56px; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px; right: 24px;
+      font-family: var(--font-head);
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--primary);
+      opacity: 0.12;
+      line-height: 1;
+    }
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      color: var(--accent);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+    .testimonial-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .testimonial-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .testimonial-avatar--orange { background: linear-gradient(135deg, var(--primary), #e8733f); }
+    .testimonial-avatar--blue   { background: linear-gradient(135deg, var(--secondary), #2a6a96); }
+    .testimonial-avatar--green  { background: linear-gradient(135deg, var(--success), #3d8a65); }
+    .testimonial-avatar--gold   { background: linear-gradient(135deg, var(--accent), #e8b85e); }
+    .testimonial-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .testimonial-country {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .testimonials-social-proof {
+      text-align: center;
+      margin-top: 48px;
+      font-family: var(--font-head);
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+    .testimonials-social-proof strong {
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 900px) {
+      .testimonials-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================================
+       BLOG / RESOURCES
+    ========================================================= */
+    #resources { position: relative; overflow: hidden; }
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .resource-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .resource-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+    .resource-thumb {
+      height: 180px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .resource-thumb--orange {
+      background: linear-gradient(135deg, #C75B2F 0%, #e8733f 100%);
+    }
+    .resource-thumb--blue {
+      background: linear-gradient(135deg, #1B4965 0%, #2a6a96 100%);
+    }
+    .resource-thumb--green {
+      background: linear-gradient(135deg, #2D6A4F 0%, #3d8a65 100%);
+    }
+    .resource-thumb-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.15;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='white' stroke-width='0.7'%3E%3Crect x='5' y='5' width='30' height='30' transform='rotate(45 20 20)'/%3E%3Ccircle cx='20' cy='20' r='5'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 40px 40px;
+    }
+    .resource-thumb-icon {
+      font-size: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .resource-badge {
+      position: absolute;
+      top: 12px; right: 12px;
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+      backdrop-filter: blur(4px);
+    }
+    .resource-body { padding: 24px; }
+    .resource-category {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .resource-card h3 {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .resource-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .resource-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      transition: gap 0.2s;
+    }
+    .resource-link:hover { gap: 10px; }
+
+    @media (max-width: 900px) {
+      .resources-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .resources-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    }
+
+    /* =========================================================
+       FAQ
+    ========================================================= */
+    #faq { position: relative; overflow: hidden; }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+    .faq-item:hover { box-shadow: var(--shadow-md); }
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: none;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .faq-question:hover { color: var(--primary); }
+    .faq-chevron {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      color: var(--primary);
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+      background: var(--primary);
+      color: var(--white);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s;
+      padding: 0 24px;
+    }
+    .faq-answer-inner {
+      padding-bottom: 20px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+
+    @media (max-width: 768px) {
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================================
+       EMAIL SIGNUP
+    ========================================================= */
+    #signup {
+      position: relative;
+      overflow: hidden;
+    }
+    .signup-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .signup-icon {
+      width: 72px; height: 72px;
+      background: rgba(212,162,78,0.15);
+      border: 2px solid rgba(212,162,78,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 24px;
+    }
+    .signup-form {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .signup-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 16px 20px;
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 50px;
+      background: rgba(255,255,255,0.08);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .signup-input::placeholder { color: rgba(255,255,255,0.4); }
+    .signup-input:focus { border-color: var(--accent); }
+    .signup-form .btn { white-space: nowrap; }
+    .signup-note {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+    .signup-perks {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 32px;
+      flex-wrap: wrap;
+    }
+    .signup-perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .signup-perk span { color: var(--accent); font-size: 1rem; }
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+    #footer {
+      background: #0d0d1f;
+      color: rgba(255,255,255,0.6);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand { }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .footer-logo img {
+      width: 40px; height: 40px;
+      object-fit: contain;
+    }
+    .footer-logo-text {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+    .footer-logo-text span { color: var(--accent); }
+    .footer-tagline {
+      font-size: 0.88rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      max-width: 260px;
+    }
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-social {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all 0.3s;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-social:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .footer-col h4 {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy { font-size: 0.82rem; }
+    .footer-made {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 560px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================================
+       DECORATIVE ZELLIGE CORNER ORNAMENTS
+    ========================================================= */
+    .ornament {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.06;
+    }
+
+    /* =========================================================
+       BACK TO TOP
+    ========================================================= */
+    #back-to-top {
+      position: fixed;
+      bottom: 32px; right: 32px;
+      width: 48px; height: 48px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 16px rgba(199,91,47,0.4);
+      transition: all 0.3s;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 500;
+    }
+    #back-to-top.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+    #back-to-top:hover {
+      background: #b34d24;
+      transform: translateY(-3px);
+    }
+
+    /* =========================================================
+       RESPONSIVE MISC
+    ========================================================= */
+    @media (max-width: 600px) {
+      :root { --section-pad: 72px 0; }
+      .hero-stats { gap: 20px; }
+      .hero-stat-divider { display: none; }
+      .btn-lg { padding: 14px 24px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+============================================================ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo-nobg.png" alt="Belditalk Logo" />
+        <span class="nav-logo-text">Beldi<span>talk</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#offerings">Offerings</a></li>
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#signup" class="btn btn-outline">Join Free</a>
+        <a href="#pricing" class="btn btn-primary">Get the E-Book →</a>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav-mobile" id="mobileNav">
+  <a href="#about"      onclick="closeMobileNav()">About</a>
+  <a href="#offerings"  onclick="closeMobileNav()">What You Get</a>
+  <a href="#curriculum" onclick="closeMobileNav()">Curriculum</a>
+  <a href="#pricing"    onclick="closeMobileNav()">Pricing</a>
+  <a href="#testimonials" onclick="closeMobileNav()">Reviews</a>
+  <a href="#faq"        onclick="closeMobileNav()">FAQ</a>
+  <a href="#pricing" class="btn btn-primary" onclick="closeMobileNav()">Get the E-Book →</a>
+  <a href="#signup"  class="btn btn-outline"  onclick="closeMobileNav()">Join Free Community</a>
+</div>
+
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section id="hero">
+  <div class="hero-pattern"></div>
+
+  <!-- Decorative SVG shapes -->
+  <svg class="hero-geo hero-geo-1" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="90,10 160,50 160,130 90,170 20,130 20,50" stroke="#D4A24E" stroke-width="1.5"/>
+    <polygon points="90,30 140,58 140,122 90,150 40,122 40,58" stroke="#D4A24E" stroke-width="1"/>
+    <polygon points="90,50 120,66 120,114 90,130 60,114 60,66" stroke="#C75B2F" stroke-width="0.8"/>
+    <circle cx="90" cy="90" r="10" stroke="#D4A24E" stroke-width="1"/>
+    <circle cx="90" cy="90" r="3" fill="#D4A24E" opacity="0.6"/>
+    <line x1="90" y1="10" x2="90" y2="30" stroke="#D4A24E" stroke-width="0.8"/>
+    <line x1="160" y1="50" x2="140" y2="58" stroke="#D4A24E" stroke-width="0.8"/>
+    <line x1="160" y1="130" x2="140" y2="122" stroke="#D4A24E" stroke-width="0.8"/>
+    <line x1="90" y1="170" x2="90" y2="150" stroke="#D4A24E" stroke-width="0.8"/>
+    <line x1="20" y1="130" x2="40" y2="122" stroke="#D4A24E" stroke-width="0.8"/>
+    <line x1="20" y1="50" x2="40" y2="58" stroke="#D4A24E" stroke-width="0.8"/>
+  </svg>
+
+  <svg class="hero-geo hero-geo-2" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="20" width="100" height="100" transform="rotate(45 70 70)" stroke="#C75B2F" stroke-width="1.5"/>
+    <rect x="35" y="35" width="70" height="70" transform="rotate(45 70 70)" stroke="#C75B2F" stroke-width="1"/>
+    <rect x="50" y="50" width="40" height="40" transform="rotate(45 70 70)" stroke="#D4A24E" stroke-width="0.8"/>
+    <circle cx="70" cy="70" r="6" stroke="#D4A24E" stroke-width="1"/>
+  </svg>
+
+  <div class="hero-content">
+    <img src="images/logo-nobg.png" alt="Belditalk" class="hero-logo reveal" />
+
+    <div class="hero-badge reveal reveal-delay-1">
+      ✦ Online Moroccan Darija Academy
+    </div>
+
+    <!-- Word of the Day -->
+    <div class="wotd reveal reveal-delay-2">
+      <div class="wotd-icon">📖</div>
+      <div class="wotd-body">
+        <span class="wotd-label">Word of the Day</span>
+        <div>
+          <span class="wotd-word" id="wotd-word">Sbah lkhir</span>
+          <span class="wotd-translation" id="wotd-translation"> — Good morning</span>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="hero-title reveal reveal-delay-2">
+      Learn Moroccan Darija —<br />
+      <span class="highlight">Speak Like a Local</span>
+    </h1>
+
+    <p class="hero-sub reveal reveal-delay-3">
+      Master Morocco's language and culture with native-speaker guidance,
+      interactive lessons, and a global community of passionate learners.
+    </p>
+
+    <div class="hero-actions reveal reveal-delay-4">
+      <a href="#pricing" class="btn btn-primary btn-lg">Get the E-Book →</a>
+      <a href="#signup"  class="btn btn-outline btn-lg">Join Free Community</a>
+    </div>
+
+    <div class="hero-stats reveal reveal-delay-5">
+      <div class="hero-stat">
+        <span class="hero-stat-num">197</span>
+        <span class="hero-stat-label">Pages</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">12</span>
+        <span class="hero-stat-label">Modules</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">3</span>
+        <span class="hero-stat-label">Levels</span>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">1000+</span>
+        <span class="hero-stat-label">Phrases</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-mouse"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ABOUT — WHY LEARN DARIJA?
+============================================================ -->
+<section id="about" class="section section--light">
+  <div class="zellige-bg"></div>
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-cards">
+        <div class="about-card reveal">
+          <div class="about-card-icon about-card-icon--orange">✈️</div>
+          <div>
+            <h3>For Travelers</h3>
+            <p>Navigate Morocco authentically — from bustling souks to mountain villages. Locals will welcome you with open arms when you speak their language.</p>
+          </div>
+        </div>
+        <div class="about-card reveal reveal-delay-1">
+          <div class="about-card-icon about-card-icon--blue">🌿</div>
+          <div>
+            <h3>For Heritage Learners</h3>
+            <p>Reconnect with your Moroccan roots, communicate with family, and rediscover the richness of the culture that shaped you.</p>
+          </div>
+        </div>
+        <div class="about-card reveal reveal-delay-2">
+          <div class="about-card-icon about-card-icon--green">🧠</div>
+          <div>
+            <h3>For Language Enthusiasts</h3>
+            <p>Explore Darija's unique mix of Arabic, Amazigh, French, and Spanish. A linguistic adventure unlike any other dialect.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text reveal reveal-delay-1">
+        <span class="section-label">About Belditalk</span>
+        <h2 class="section-title">Why Learn<br/>Moroccan Darija?</h2>
+        <p class="about-story">
+          Moroccan Darija is spoken by over <strong>36 million people</strong>, yet it's one of the world's most under-taught languages.
+          I'm <strong>Elias Lamseyah</strong>, and I built Belditalk because I saw how many people — travelers, diaspora, language lovers —
+          struggled to find quality Darija resources. This academy bridges that gap with real, spoken Moroccan Arabic, not textbook Modern Standard.
+        </p>
+
+        <div class="about-stats">
+          <div class="about-stat">
+            <span class="about-stat-num">197</span>
+            <span class="about-stat-label">Pages of content</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">12</span>
+            <span class="about-stat-label">Structured modules</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">3</span>
+            <span class="about-stat-label">Proficiency levels</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">1000+</span>
+            <span class="about-stat-label">Words &amp; phrases</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     WHAT YOU GET
+============================================================ -->
+<section id="offerings" class="section section--dark">
+  <!-- Zellige pattern overlay -->
+  <div style="position:absolute;inset:0;opacity:0.04;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23D4A24E' stroke-width='0.6'%3E%3Crect x='8' y='8' width='44' height='44' transform='rotate(45 30 30)'/%3E%3Crect x='18' y='18' width='24' height='24' transform='rotate(45 30 30)'/%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/svg%3E\");background-size:60px 60px;pointer-events:none;"></div>
+
+  <div class="container" style="position:relative;">
+    <div class="text-center">
+      <span class="section-label reveal">Everything You Need</span>
+      <h2 class="section-title reveal reveal-delay-1">What You Get with Belditalk</h2>
+      <p class="section-sub reveal reveal-delay-2">A complete learning ecosystem — from self-paced study to live human connection.</p>
+    </div>
+
+    <div class="offerings-grid">
+
+      <!-- E-Book -->
+      <div class="offering-card offering-card--featured reveal reveal-delay-1">
+        <div class="offering-icon offering-icon--book">📚</div>
+        <h3>I ❤️ Moroccan Darija</h3>
+        <div class="offering-subtitle">The E-Book</div>
+        <p>The most comprehensive Moroccan Darija guide available — covering grammar, vocabulary, and culture with QR codes linking to real audio recordings.</p>
+        <div class="offering-features">
+          <div class="offering-feature">197 pages of structured content</div>
+          <div class="offering-feature">Grammar + vocabulary + culture</div>
+          <div class="offering-feature">QR codes to audio pronunciation</div>
+          <div class="offering-feature">Self-paced learning at your speed</div>
+          <div class="offering-feature">Downloadable PDF format</div>
+        </div>
+      </div>
+
+      <!-- Live Sessions -->
+      <div class="offering-card reveal reveal-delay-2">
+        <div class="offering-icon offering-icon--video">🎥</div>
+        <h3>Live Sessions</h3>
+        <div class="offering-subtitle">Monthly Zoom Classes</div>
+        <p>Join Elias live each month for interactive lessons, cultural storytelling, and real-time conversation practice with fellow learners worldwide.</p>
+        <div class="offering-features">
+          <div class="offering-feature">Monthly interactive Zoom classes</div>
+          <div class="offering-feature">Cultural storytelling sessions</div>
+          <div class="offering-feature">Pronunciation practice & feedback</div>
+          <div class="offering-feature">Live Q&amp;A with Elias</div>
+          <div class="offering-feature">Recordings available after</div>
+        </div>
+      </div>
+
+      <!-- Community -->
+      <div class="offering-card reveal reveal-delay-3">
+        <div class="offering-icon offering-icon--comm">🌍</div>
+        <h3>Global Community</h3>
+        <div class="offering-subtitle">Free Discord Access</div>
+        <p>Connect with 500+ Darija learners from around the world. Practice daily, join cultural events, and grow together on your language journey.</p>
+        <div class="offering-features">
+          <div class="offering-feature">Free Discord community</div>
+          <div class="offering-feature">Daily language challenges</div>
+          <div class="offering-feature">Peer practice partners</div>
+          <div class="offering-feature">Cultural events & celebrations</div>
+          <div class="offering-feature">Native speaker support</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CURRICULUM PREVIEW
+============================================================ -->
+<section id="curriculum" class="section">
+  <div class="zellige-bg zellige-bg--gold" style="opacity:0.04;"></div>
+  <div class="container" style="position:relative;">
+    <div class="curriculum-header">
+      <span class="section-label reveal">Inside the E-Book</span>
+      <h2 class="section-title reveal reveal-delay-1">Curriculum Preview</h2>
+      <p class="section-sub reveal reveal-delay-2">Structured across three levels, each module builds naturally on the last — taking you from zero to confident conversations.</p>
+    </div>
+
+    <div class="curriculum-tabs reveal reveal-delay-2">
+      <button class="curriculum-tab active" onclick="switchTab(this,'beginner')">🌱 Beginner (1–4)</button>
+      <button class="curriculum-tab" onclick="switchTab(this,'intermediate')">🌿 Intermediate (5–8)</button>
+      <button class="curriculum-tab" onclick="switchTab(this,'advanced')">🌳 Advanced (9–12)</button>
+    </div>
+
+    <!-- BEGINNER -->
+    <div class="curriculum-panel active" id="tab-beginner">
+      <div class="curriculum-modules">
+        <div class="module-card reveal">
+          <div class="module-num">Module 01</div>
+          <h4>Your First Words in Darija</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Greetings, farewells &amp; pleasantries</div>
+            <div class="module-bullet">The Darija alphabet &amp; pronunciation guide</div>
+            <div class="module-bullet">Essential expressions for daily life</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-1">
+          <div class="module-num">Module 02</div>
+          <h4>Numbers, Colors &amp; Time</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Counting from 1 to 1000</div>
+            <div class="module-bullet">Colors, days of the week, months</div>
+            <div class="module-bullet">Telling time the Moroccan way</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-2">
+          <div class="module-num">Module 03</div>
+          <h4>Getting Around Morocco</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Directions, transport &amp; navigation</div>
+            <div class="module-bullet">Asking for help &amp; giving instructions</div>
+            <div class="module-bullet">Key vocabulary for taxis, trains &amp; buses</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-3">
+          <div class="module-num">Module 04</div>
+          <h4>Souk Shopping &amp; Bargaining</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Prices, currency &amp; market vocabulary</div>
+            <div class="module-bullet">How to bargain like a Moroccan</div>
+            <div class="module-bullet">Food, spices &amp; traditional crafts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERMEDIATE -->
+    <div class="curriculum-panel" id="tab-intermediate">
+      <div class="curriculum-modules">
+        <div class="module-card reveal">
+          <div class="module-num">Module 05</div>
+          <h4>Family &amp; Social Relationships</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Family vocabulary &amp; kinship terms</div>
+            <div class="module-bullet">Talking about your life &amp; origins</div>
+            <div class="module-bullet">Social customs &amp; polite conversation</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-1">
+          <div class="module-num">Module 06</div>
+          <h4>Moroccan Food &amp; Hospitality</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Traditional dishes &amp; ingredient names</div>
+            <div class="module-bullet">Ordering at restaurants &amp; cafés</div>
+            <div class="module-bullet">Tea culture &amp; hosting vocabulary</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-2">
+          <div class="module-num">Module 07</div>
+          <h4>Work, Jobs &amp; Daily Routine</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Occupations &amp; workplace vocabulary</div>
+            <div class="module-bullet">Describing your day &amp; schedule</div>
+            <div class="module-bullet">Common verbs in past &amp; present tense</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-3">
+          <div class="module-num">Module 08</div>
+          <h4>Emotions, Opinions &amp; Storytelling</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Expressing feelings &amp; reactions</div>
+            <div class="module-bullet">Agreeing, disagreeing &amp; persuading</div>
+            <div class="module-bullet">Narrating events in the past tense</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADVANCED -->
+    <div class="curriculum-panel" id="tab-advanced">
+      <div class="curriculum-modules">
+        <div class="module-card reveal">
+          <div class="module-num">Module 09</div>
+          <h4>Moroccan Slang &amp; Street Darija</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Regional slang &amp; youth language</div>
+            <div class="module-bullet">Humor, proverbs &amp; idioms</div>
+            <div class="module-bullet">Code-switching with French &amp; Amazigh</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-1">
+          <div class="module-num">Module 10</div>
+          <h4>Business &amp; Professional Darija</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Formal greetings &amp; professional register</div>
+            <div class="module-bullet">Negotiations, emails &amp; meetings</div>
+            <div class="module-bullet">Industry-specific vocabulary</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-2">
+          <div class="module-num">Module 11</div>
+          <h4>Culture, Religion &amp; Traditions</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Ramadan, Eid &amp; celebration vocabulary</div>
+            <div class="module-bullet">Religious phrases &amp; cultural sensitivities</div>
+            <div class="module-bullet">Moroccan history &amp; identity in language</div>
+          </div>
+        </div>
+        <div class="module-card reveal reveal-delay-3">
+          <div class="module-num">Module 12</div>
+          <h4>Fluency &amp; Advanced Conversation</h4>
+          <div class="module-bullets">
+            <div class="module-bullet">Complex sentence structures &amp; conjunctions</div>
+            <div class="module-bullet">Current events, politics &amp; debate vocabulary</div>
+            <div class="module-bullet">Fluency drills &amp; immersion strategies</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="curriculum-note reveal">
+      📖 <strong>Full curriculum included in the e-book</strong> — each module comes with exercises, vocabulary lists, cultural notes, and QR codes to audio recordings.
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PRICING
+============================================================ -->
+<section id="pricing" class="section section--light">
+  <div class="zellige-bg" style="opacity:0.05;"></div>
+  <div class="container" style="position:relative;">
+    <div class="text-center">
+      <span class="section-label reveal">Simple Pricing</span>
+      <h2 class="section-title reveal reveal-delay-1">One Package, Everything Included</h2>
+      <p class="section-sub reveal reveal-delay-2">No subscriptions. No hidden fees. One payment, lifetime access.</p>
+    </div>
+
+    <div class="pricing-wrapper">
+      <div class="pricing-card reveal reveal-delay-2">
+        <div class="pricing-tag">Complete Darija Package</div>
+        <div class="pricing-title">Everything You Need to Speak Darija</div>
+        <div class="pricing-subtitle">E-Book + Live Sessions + Community</div>
+
+        <div class="pricing-price">
+          <span class="price-amount"><sup>$</sup>29</span>
+          <span class="price-was">$49</span>
+        </div>
+        <div class="price-note">One-time payment — lifetime access &amp; updates</div>
+
+        <div class="pricing-divider"></div>
+
+        <div class="pricing-features">
+          <div class="pricing-feature">
+            <div class="pricing-feature-check">✓</div>
+            <span>197-page "I ❤️ Moroccan Darija" E-Book (PDF)</span>
+          </div>
+          <div class="pricing-feature">
+            <div class="pricing-feature-check">✓</div>
+            <span>Access to monthly live Zoom sessions with Elias</span>
+          </div>
+          <div class="pricing-feature">
+            <div class="pricing-feature-check">✓</div>
+            <span>Free Discord community membership</span>
+          </div>
+          <div class="pricing-feature">
+            <div class="pricing-feature-check">✓</div>
+            <span>Audio pronunciation guides via QR codes</span>
+          </div>
+          <div class="pricing-feature">
+            <div class="pricing-feature-check">✓</div>
+            <span>Deep cultural insights in every module</span>
+          </div>
+          <div class="pricing-feature">
+            <div class="pricing-feature-check">✓</div>
+            <span>Lifetime updates as the e-book evolves</span>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-primary btn-lg pricing-cta">Get Started Now →</a>
+
+        <div class="pricing-guarantee">
+          <span>🛡️</span>
+          <span>30-day money-back guarantee — no questions asked</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     TESTIMONIALS
+============================================================ -->
+<section id="testimonials" class="section">
+  <div class="zellige-bg zellige-bg--gold" style="opacity:0.04;"></div>
+  <div class="container" style="position:relative;">
+    <div class="text-center testimonials-header">
+      <span class="section-label reveal">What Learners Say</span>
+      <h2 class="section-title reveal reveal-delay-1">Loved by Students Worldwide</h2>
+      <p class="section-sub reveal reveal-delay-2">Real stories from real learners who went from zero to speaking Darija confidently.</p>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I traveled to Marrakech after finishing the beginner modules and the locals were genuinely surprised — and thrilled — that I could speak Darija. This e-book is the real deal."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar testimonial-avatar--orange">S</div>
+          <div>
+            <div class="testimonial-name">Sofia Marchetti</div>
+            <div class="testimonial-country">🇮🇹 Milan, Italy</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"As a heritage learner who grew up outside Morocco, this finally helped me connect with my grandparents in their language. I'm genuinely emotional about how much this means to me."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar testimonial-avatar--blue">A</div>
+          <div>
+            <div class="testimonial-name">Adam Benali</div>
+            <div class="testimonial-country">🇫🇷 Paris, France</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The live sessions with Elias are incredible. His energy and passion for Moroccan culture come through in every class. I've tried many language apps — this is in a completely different league."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar testimonial-avatar--green">J</div>
+          <div>
+            <div class="testimonial-name">Jessica Wong</div>
+            <div class="testimonial-country">🇨🇦 Toronto, Canada</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I came for the e-book and stayed for the community. The Discord is so welcoming — daily challenges, practice partners, and native speakers who are genuinely happy to help. 10/10."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar testimonial-avatar--gold">M</div>
+          <div>
+            <div class="testimonial-name">Marcus Thompson</div>
+            <div class="testimonial-country">🇺🇸 New York, USA</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="testimonials-social-proof reveal">
+      Join <strong>500+</strong> learners from over 40 countries in the Belditalk community
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BLOG / RESOURCES
+============================================================ -->
+<section id="resources" class="section section--light">
+  <div class="zellige-bg" style="opacity:0.05;"></div>
+  <div class="container" style="position:relative;">
+    <div class="text-center">
+      <span class="section-label reveal">Free Resources</span>
+      <h2 class="section-title reveal reveal-delay-1">Free Darija Resources</h2>
+      <p class="section-sub reveal reveal-delay-2">Start learning today — no purchase required. These guides are our gift to you.</p>
+    </div>
+
+    <div class="resources-grid">
+
+      <div class="resource-card reveal">
+        <div class="resource-thumb resource-thumb--orange">
+          <div class="resource-thumb-pattern"></div>
+          <div class="resource-thumb-icon">🗣️</div>
+          <span class="resource-badge">Free Guide</span>
+        </div>
+        <div class="resource-body">
+          <span class="resource-category">Travel Darija</span>
+          <h3>10 Essential Phrases Every Morocco Traveler Needs</h3>
+          <p>Survive and thrive in Morocco with these must-know expressions. From greetings to emergencies — all phonetically written for instant use.</p>
+          <a href="#" class="resource-link">Read Free Guide →</a>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-1">
+        <div class="resource-thumb resource-thumb--blue">
+          <div class="resource-thumb-pattern"></div>
+          <div class="resource-thumb-icon">🕌</div>
+          <span class="resource-badge">Coming Soon</span>
+        </div>
+        <div class="resource-body">
+          <span class="resource-category">Culture</span>
+          <h3>Understanding Moroccan Culture Through Language</h3>
+          <p>Language is culture. Explore how Darija reflects Morocco's unique Amazigh, Arab, and Mediterranean heritage in every sentence.</p>
+          <a href="#" class="resource-link">Coming Soon →</a>
+        </div>
+      </div>
+
+      <div class="resource-card reveal reveal-delay-2">
+        <div class="resource-thumb resource-thumb--green">
+          <div class="resource-thumb-pattern"></div>
+          <div class="resource-thumb-icon">🌅</div>
+          <span class="resource-badge">Coming Soon</span>
+        </div>
+        <div class="resource-body">
+          <span class="resource-category">Beginner</span>
+          <h3>Your First Day Speaking Darija — A Beginner's Script</h3>
+          <p>A ready-to-use script for your very first conversation in Darija. Practice out loud, build confidence, and impress locals from day one.</p>
+          <a href="#" class="resource-link">Coming Soon →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FAQ
+============================================================ -->
+<section id="faq" class="section">
+  <div class="zellige-bg zellige-bg--gold" style="opacity:0.04;"></div>
+  <div class="container" style="position:relative;">
+    <div class="text-center">
+      <span class="section-label reveal">Got Questions?</span>
+      <h2 class="section-title reveal reveal-delay-1">Frequently Asked Questions</h2>
+      <p class="section-sub reveal reveal-delay-2">Everything you need to know before starting your Darija journey.</p>
+    </div>
+
+    <div class="faq-grid">
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What exactly is Moroccan Darija?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Moroccan Darija is the colloquial Arabic dialect spoken daily in Morocco. Unlike Modern Standard Arabic (MSA) taught in schools, Darija is the living language of the streets, homes, and markets. It blends Arabic roots with Amazigh (Berber), French, Spanish, and even Portuguese — making it a fascinatingly unique dialect spoken by over 36 million people.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do I need prior Arabic knowledge?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Not at all! The e-book is designed for complete beginners with zero Arabic background. Module 1 starts from the very basics — pronunciation, the alphabet-equivalent sounds, and your first 50 words. If you already know some Arabic or French, you'll progress even faster, but it's absolutely not required.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How are the live sessions structured?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Live sessions happen monthly via Zoom and typically run 60–90 minutes. Each session covers a theme from the curriculum, includes pronunciation practice, cultural storytelling from Elias, and an open Q&amp;A. Sessions are recorded and available to all students who purchase the package, so you never miss a lesson.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-3">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What format is the e-book, and how do I access it?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The e-book is a beautifully designed PDF with 197 pages. After purchase you receive an instant download link via email. You can read it on any device — phone, tablet, laptop, or print it out. QR codes inside the book link to audio recordings so you can hear native pronunciation for every key phrase.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I get a refund if I'm not satisfied?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes! We offer a full 30-day money-back guarantee. If you're not completely satisfied with the e-book and your learning experience, contact us within 30 days of purchase for a full refund — no questions asked. We're confident you'll love it, but your satisfaction always comes first.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-1">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How do I join the Discord community?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            The Discord community is free to join regardless of purchase. Use the "Join Free Community" button anywhere on this page to get the invite link. Once inside, introduce yourself in #introductions, join the daily word challenge in #wotd, and find a practice partner in #language-exchange. The community is active, welcoming, and full of passionate Darija learners.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-2">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How long does it take to learn Darija?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            With consistent daily practice (even just 15–20 minutes), most students can hold basic conversations within 4–6 weeks and reach intermediate level in 3–4 months. Darija is phonetically accessible for English speakers, and its vocabulary overlap with French makes it feel surprisingly approachable. The live sessions and community accelerate progress significantly.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item reveal reveal-delay-3">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Will the e-book be updated in the future?
+          <span class="faq-chevron">▾</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Yes! Your purchase includes lifetime updates. As we expand the curriculum, add new audio content, or refine explanations, you'll receive all updates at no extra cost. We're committed to making this the definitive Darija learning resource, and your one-time investment grows in value over time.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     EMAIL SIGNUP
+============================================================ -->
+<section id="signup" class="section section--blue">
+  <div style="position:absolute;inset:0;opacity:0.06;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23D4A24E' stroke-width='0.7'%3E%3Cpolygon points='40,6 70,23 70,57 40,74 10,57 10,23'/%3E%3Cpolygon points='40,18 58,29 58,51 40,62 22,51 22,29'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3C/g%3E%3C/svg%3E\");background-size:80px 80px;pointer-events:none;"></div>
+
+  <div class="container" style="position:relative;">
+    <div class="signup-inner">
+      <div class="signup-icon reveal">✉️</div>
+      <span class="section-label reveal">Stay Connected</span>
+      <h2 class="section-title reveal reveal-delay-1">Get Free Weekly Darija Lessons</h2>
+      <p class="section-sub reveal reveal-delay-2" style="margin:0 auto;">
+        Join 500+ learners receiving free weekly Darija lessons, cultural insights, and early access to new resources — straight to your inbox.
+      </p>
+
+      <form class="signup-form reveal reveal-delay-3" action="#" onsubmit="handleSignup(event)">
+        <input
+          type="email"
+          class="signup-input"
+          placeholder="Enter your email address..."
+          id="signupEmail"
+          required
+          autocomplete="email"
+        />
+        <button type="submit" class="btn btn-accent">Subscribe →</button>
+      </form>
+      <div id="signupMessage" style="display:none;margin-top:16px;color:#D4A24E;font-family:var(--font-head);font-weight:700;">
+        🎉 You're in! Check your inbox for a welcome gift.
+      </div>
+
+      <div class="signup-note reveal">No spam, ever. Unsubscribe with one click, anytime.</div>
+
+      <div class="signup-perks reveal reveal-delay-4">
+        <div class="signup-perk"><span>📖</span> Weekly word &amp; phrase</div>
+        <div class="signup-perk"><span>🎧</span> Audio pronunciation tips</div>
+        <div class="signup-perk"><span>🌍</span> Cultural stories</div>
+        <div class="signup-perk"><span>🎁</span> Exclusive free resources</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo-nobg.png" alt="Belditalk" />
+          <span class="footer-logo-text">Beldi<span>talk</span>.com</span>
+        </div>
+        <p class="footer-tagline">
+          The world's most accessible Moroccan Darija academy — connecting language learners to Morocco's living culture.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" title="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" class="footer-social" title="TikTok">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
+          </a>
+          <a href="#" class="footer-social" title="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          </a>
+          <a href="#" class="footer-social" title="Discord">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <div class="footer-links">
+          <a href="#about">About Darija</a>
+          <a href="#offerings">Offerings</a>
+          <a href="#curriculum">Curriculum</a>
+          <a href="#resources">Free Resources</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Community</h4>
+        <div class="footer-links">
+          <a href="#signup">Join Newsletter</a>
+          <a href="#">Discord Community</a>
+          <a href="#">Live Sessions</a>
+          <a href="#testimonials">Student Stories</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Info</h4>
+        <div class="footer-links">
+          <a href="#">About Elias</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Belditalk.com — All rights reserved</div>
+      <div class="footer-made">Made with ❤️ in Morocco</div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Back to Top -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  /* ---- NAVBAR SCROLL EFFECT ---- */
+  const navbar = document.getElementById('navbar');
+  const backTop = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+      backTop.classList.add('visible');
+    } else {
+      navbar.classList.remove('scrolled');
+      backTop.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  /* ---- HAMBURGER MENU ---- */
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
+  });
+
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+  }
+
+  /* ---- SCROLL REVEAL ---- */
+  const revealEls = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  /* ---- CURRICULUM TABS ---- */
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.curriculum-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.curriculum-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+
+    // Re-trigger reveals for newly shown cards
+    const newCards = document.getElementById('tab-' + tabId).querySelectorAll('.reveal:not(.revealed)');
+    newCards.forEach(card => revealObserver.observe(card));
+  }
+
+  /* ---- FAQ ACCORDION ---- */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+
+    // Open if was closed
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ---- EMAIL SIGNUP ---- */
+  function handleSignup(e) {
+    e.preventDefault();
+    const email = document.getElementById('signupEmail').value;
+    if (email) {
+      document.getElementById('signupMessage').style.display = 'block';
+      document.getElementById('signupEmail').value = '';
+      document.getElementById('signupEmail').style.display = 'none';
+      e.target.querySelector('button').style.display = 'none';
+    }
+  }
+
+  /* ---- WORD OF THE DAY ---- */
+  const words = [
+    { word: 'Sbah lkhir', translation: 'Good morning' },
+    { word: 'Bslama', translation: 'Goodbye' },
+    { word: 'Shukran', translation: 'Thank you' },
+    { word: 'Bghit atay', translation: 'I want tea' },
+    { word: 'Fash kayn?', translation: 'What\'s going on?' },
+    { word: 'Mezyan!', translation: 'Good / Great!' },
+    { word: 'Walu', translation: 'Nothing' },
+    { word: 'Daba', translation: 'Now / Soon' },
+    { word: 'Zwina', translation: 'Beautiful' },
+    { word: 'Bessah', translation: 'Truly / For real' },
+    { word: 'Mzien bzzaf', translation: 'Very good' },
+    { word: 'Safi', translation: 'Alright / Done' },
+    { word: 'Fin kayna?', translation: 'Where is it?' },
+    { word: 'Chhal?', translation: 'How much?' },
+    { word: 'Ma 3arftsh', translation: 'I don\'t know' },
+  ];
+
+  const dayIndex = new Date().getDay() + new Date().getDate();
+  const todayWord = words[dayIndex % words.length];
+  document.getElementById('wotd-word').textContent = todayWord.word;
+  document.getElementById('wotd-translation').textContent = ' — ' + todayWord.translation;
+
+  /* ---- SMOOTH SCROLL FOR ANCHOR LINKS ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
