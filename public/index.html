@@ -20,6 +20,52 @@
   <meta name="twitter:title" content="Belditalk.com — Learn Moroccan Darija" />
   <meta name="twitter:description" content="Master Morocco's language with the I ❤️ Moroccan Darija e-book, live sessions, and free community." />
 
+  <!-- Favicon & Canonical -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="canonical" href="https://belditalk.com" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "I ❤️ Moroccan Darija — Beginner Course",
+    "description": "197-page comprehensive Moroccan Darija e-book with 12 modules, 1000+ phrases, and cultural guides for total beginners.",
+    "brand": { "@type": "Brand", "name": "Belditalk" },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Starter Pack",
+        "price": "50",
+        "priceCurrency": "MAD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://belditalk.lemonsqueezy.com/checkout/buy/e2395ee0-7003-4747-8dd2-44b782541421"
+      },
+      {
+        "@type": "Offer",
+        "name": "Beginner Course",
+        "price": "290",
+        "priceCurrency": "MAD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://belditalk.lemonsqueezy.com/checkout/buy/476e9db3-3cd2-4c17-bc67-251371f837e4"
+      },
+      {
+        "@type": "Offer",
+        "name": "Premium Bundle",
+        "price": "490",
+        "priceCurrency": "MAD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://belditalk.lemonsqueezy.com/checkout/buy/b59fcba6-098e-426d-8663-c62e3e5cc34f"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "500"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -235,8 +281,8 @@
       gap: 10px;
     }
     .nav-logo img {
-      width: 44px;
-      height: 44px;
+      height: 40px;
+      width: auto;
       object-fit: contain;
     }
     .nav-logo-text {
@@ -1866,6 +1912,482 @@
       .lesson-phrases-grid { grid-template-columns: repeat(2, 1fr); }
       .dialogue-box { padding: 24px 20px; }
     }
+
+    /* =========================================================
+       DARK MODE
+    ========================================================= */
+    :root.dark-mode {
+      --white:   #1e1e38;
+      --light:   #252545;
+      --text:    #e8e8f0;
+      --text-muted: #9898b8;
+      --border:  rgba(255,255,255,0.09);
+    }
+    .dark-mode body { background: var(--white); }
+    .dark-mode .section--light { background: var(--light); }
+    .dark-mode .about-card { background: #2a2a4a; }
+    .dark-mode .module-card { background: #2a2a4a; }
+    .dark-mode .tier-card { background: #2a2a4a; border-color: rgba(255,255,255,0.1); }
+    .dark-mode .testimonial-card { background: #2a2a4a; border-color: rgba(255,255,255,0.07); }
+    .dark-mode .resource-card { background: #2a2a4a; border-color: rgba(255,255,255,0.07); }
+    .dark-mode .faq-item { border-color: rgba(255,255,255,0.08); }
+    .dark-mode .faq-question { color: var(--text); }
+    .dark-mode .faq-chevron { background: #3a3a5a; }
+    .dark-mode .mc-input { background: #2a2a4a; border-color: rgba(255,255,255,0.1); color: var(--text); }
+    .dark-mode .about-stat { background: #2a2a4a; }
+    .dark-mode .dialogue-box { background: #2a2a4a; }
+    .dark-mode .phrase-front { background: #2a2a4a; border-color: rgba(255,255,255,0.1); }
+    .dark-mode .curriculum-tab { border-color: rgba(255,255,255,0.1); color: var(--text-muted); }
+    .dark-mode .curriculum-note { background: #2a2a4a; }
+    .dark-mode .testimonials-social-proof { background: #2a2a4a; border-color: rgba(255,255,255,0.07); }
+    .dark-mode .resource-body p,
+    .dark-mode .resource-body h3 { color: var(--text); }
+    .dark-mode .resource-expanded { color: var(--text-muted); }
+
+    .dark-toggle {
+      background: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      font-size: 1rem;
+      padding: 6px 8px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+      color: white;
+    }
+    .dark-toggle:hover { transform: scale(1.15); background: rgba(255,255,255,0.1); }
+
+    /* =========================================================
+       PAGE LOAD FADE-IN
+    ========================================================= */
+    body { animation: fadeInPage 0.5s ease; }
+    @keyframes fadeInPage {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* =========================================================
+       GLASS-MORPHISM CARD EFFECTS
+    ========================================================= */
+    .testimonial-card {
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    /* =========================================================
+       QUIZ SECTION
+    ========================================================= */
+    .quiz-wrapper {
+      max-width: 640px;
+      margin: 48px auto 0;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      backdrop-filter: blur(8px);
+    }
+    .quiz-progress-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .quiz-progress-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .quiz-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 2px;
+      transition: width 0.4s ease;
+      width: 0%;
+    }
+    .quiz-question {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 24px;
+      line-height: 1.4;
+    }
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .quiz-option {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.85);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .quiz-option:hover:not(:disabled) {
+      background: rgba(212,162,78,0.15);
+      border-color: var(--accent);
+      color: var(--white);
+    }
+    .quiz-option.correct {
+      background: rgba(45,106,79,0.25);
+      border-color: var(--success);
+      color: #5dba8a;
+    }
+    .quiz-option.wrong {
+      background: rgba(199,91,47,0.25);
+      border-color: var(--primary);
+      color: #e07a5a;
+    }
+    .quiz-feedback {
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 16px;
+      min-height: 20px;
+    }
+    .quiz-feedback.correct { color: #5dba8a; background: rgba(45,106,79,0.15); }
+    .quiz-feedback.wrong   { color: #e07a5a; background: rgba(199,91,47,0.15); }
+    .quiz-next-btn { margin-top: 8px; }
+    .quiz-result {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .quiz-result-score {
+      font-family: var(--font-head);
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .quiz-result-msg {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .quiz-result-pct {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 28px;
+    }
+    .quiz-result-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-outline-dark {
+      background: transparent;
+      color: rgba(255,255,255,0.7);
+      border: 2px solid rgba(255,255,255,0.25);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn-outline-dark:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+    @media (max-width: 560px) {
+      .quiz-wrapper { padding: 28px 20px; }
+      .quiz-question { font-size: 1rem; }
+    }
+
+    /* =========================================================
+       PRONUNCIATION BUTTONS & POPUP
+    ========================================================= */
+    .pronun-btn {
+      position: absolute;
+      top: 8px; right: 8px;
+      background: rgba(199,91,47,0.12);
+      border: 1px solid rgba(199,91,47,0.3);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      padding: 3px 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+    .pronun-btn:hover { background: rgba(199,91,47,0.25); transform: scale(1.1); }
+    .phrase-front { position: relative; }
+
+    .pronun-popup {
+      position: fixed;
+      bottom: 100px; left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: var(--dark);
+      color: var(--white);
+      border: 1px solid rgba(212,162,78,0.4);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      max-width: 320px;
+      width: calc(100vw - 48px);
+      z-index: 9000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-lg);
+    }
+    .pronun-popup.visible {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateX(-50%) translateY(0);
+    }
+    .pronun-popup-close {
+      position: absolute;
+      top: 8px; right: 10px;
+      background: none; border: none;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .pronun-popup-word {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .pronun-popup-guide {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      font-family: monospace;
+      margin-bottom: 10px;
+    }
+    .pronun-popup-tip {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+    /* =========================================================
+       PROGRESS INDICATOR WIDGET
+    ========================================================= */
+    .progress-widget {
+      position: fixed;
+      bottom: 88px; right: 20px;
+      background: rgba(26,26,46,0.9);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      z-index: 400;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s;
+      backdrop-filter: blur(8px);
+      min-width: 130px;
+    }
+    .progress-widget.visible { opacity: 1; }
+    .progress-widget-inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .progress-widget-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      white-space: nowrap;
+    }
+    .progress-widget-bar {
+      flex: 1;
+      height: 4px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-widget-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 2px;
+      transition: width 0.5s ease;
+      width: 0%;
+    }
+    .progress-widget-pct {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    /* =========================================================
+       WHATSAPP BUTTON
+    ========================================================= */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 96px; right: 20px;
+      width: 52px; height: 52px;
+      background: #25d366;
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      transition: all 0.3s;
+    }
+    .whatsapp-btn:hover {
+      background: #1ebe5a;
+      transform: scale(1.1);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.55);
+    }
+    #back-to-top { bottom: 32px; right: 20px; }
+
+    /* =========================================================
+       COOKIE CONSENT
+    ========================================================= */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(26,26,46,0.97);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      z-index: 8000;
+      padding: 16px 24px;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+      backdrop-filter: blur(12px);
+    }
+    .cookie-banner.visible { transform: translateY(0); }
+    .cookie-banner-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .cookie-banner-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    /* =========================================================
+       EXPANDABLE RESOURCE CARDS
+    ========================================================= */
+    .resource-card { cursor: pointer; }
+    .resource-expanded {
+      display: none;
+      padding: 16px 24px 20px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      border-top: 1px solid var(--border);
+    }
+    .resource-card.open .resource-expanded { display: block; }
+    .resource-card.open .resource-link::after { content: ' ↑'; }
+    .resource-list {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .resource-list li { line-height: 1.6; }
+    .resource-link { cursor: pointer; }
+
+    /* =========================================================
+       ADMIN PANEL
+    ========================================================= */
+    .admin-panel {
+      position: fixed;
+      top: 80px; right: 20px;
+      background: rgba(26,26,46,0.98);
+      border: 1px solid rgba(212,162,78,0.4);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      z-index: 9999;
+      min-width: 280px;
+      color: var(--white);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-lg);
+    }
+    .admin-panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .admin-panel-header h3 {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .admin-panel-header button {
+      background: none; border: none;
+      color: rgba(255,255,255,0.4);
+      font-size: 1rem; cursor: pointer;
+    }
+    .admin-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .admin-stat {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.7);
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 8px;
+    }
+    .admin-stat strong { color: var(--accent); }
+    .admin-btn-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================================================
+       TESTIMONIALS SOCIAL PROOF
+    ========================================================= */
+    .testimonials-social-proof {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      padding: 16px 24px;
+      background: var(--light);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+    }
+    .testimonials-social-proof strong { color: var(--primary); }
+    @media (max-width: 900px) {
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .testimonials-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -1877,7 +2399,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">
-        <img src="images/logo-nobg.png" alt="Belditalk Logo" />
+        <img src="images/logo-new.svg" alt="Belditalk Logo" />
         <span class="nav-logo-text">Beldi<span>talk</span></span>
       </a>
 
@@ -1891,8 +2413,9 @@
       </ul>
 
       <div class="nav-cta">
-        <a href="#signup" class="btn btn-outline">Join Free</a>
-        <a href="#pricing" class="btn btn-primary">Start Learning →</a>
+        <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+        <a href="#signup" class="btn btn-outline">Newsletter</a>
+        <a href="https://belditalk.lemonsqueezy.com/checkout/buy/e2395ee0-7003-4747-8dd2-44b782541421" class="btn btn-primary lemonsqueezy-button">Start — MAD 50 →</a>
       </div>
 
       <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
@@ -1944,7 +2467,7 @@
   </svg>
 
   <div class="hero-content">
-    <img src="images/logo-nobg.png" alt="Belditalk" class="hero-logo reveal" />
+    <img src="images/logo-new.svg" alt="Belditalk" class="hero-logo reveal" />
 
     <div class="hero-badge reveal reveal-delay-1">
       ✦ Online Moroccan Darija Academy
@@ -1973,8 +2496,8 @@
     </p>
 
     <div class="hero-actions reveal reveal-delay-4">
-      <a href="#pricing" class="btn btn-primary btn-lg">Get the E-Book →</a>
-      <a href="#signup"  class="btn btn-outline btn-lg">Join Free Community</a>
+      <a href="https://belditalk.lemonsqueezy.com/checkout/buy/e2395ee0-7003-4747-8dd2-44b782541421" class="btn btn-primary btn-lg lemonsqueezy-button">Start Learning — MAD 50 →</a>
+      <a href="#free-lesson" class="btn btn-outline btn-lg">Try Free Lesson</a>
     </div>
 
     <div class="hero-stats reveal reveal-delay-5">
@@ -2087,11 +2610,12 @@
 
     <div class="lesson-phrases-grid">
 
-      <div class="phrase-card reveal" onclick="this.classList.toggle('flipped')">
+      <div class="phrase-card reveal" onclick="flipPhrase(event, this)">
         <div class="phrase-card-inner">
           <div class="phrase-front">
             <div class="phrase-front-word">Salam</div>
             <div class="phrase-front-guide">sa-LAHM</div>
+            <button class="pronun-btn" onclick="showPronun(event, this)" data-word="Salam" data-guide="sa-LAHM" data-tip="Stress the second syllable: sa-LAHM. The 'a' is open like in 'father'." title="Pronunciation tip">🔊</button>
             <div class="phrase-front-hint">Tap to reveal →</div>
           </div>
           <div class="phrase-back">
@@ -2101,11 +2625,12 @@
         </div>
       </div>
 
-      <div class="phrase-card reveal reveal-delay-1" onclick="this.classList.toggle('flipped')">
+      <div class="phrase-card reveal reveal-delay-1" onclick="flipPhrase(event, this)">
         <div class="phrase-card-inner">
           <div class="phrase-front">
             <div class="phrase-front-word">Labas?</div>
             <div class="phrase-front-guide">la-BASS</div>
+            <button class="pronun-btn" onclick="showPronun(event, this)" data-word="Labas?" data-guide="la-BASS" data-tip="'La' like 'la' in music, 'bas' rhymes with 'bus'. The '?' means it's a question — raise your pitch at the end." title="Pronunciation tip">🔊</button>
             <div class="phrase-front-hint">Tap to reveal →</div>
           </div>
           <div class="phrase-back">
@@ -2115,11 +2640,12 @@
         </div>
       </div>
 
-      <div class="phrase-card reveal reveal-delay-2" onclick="this.classList.toggle('flipped')">
+      <div class="phrase-card reveal reveal-delay-2" onclick="flipPhrase(event, this)">
         <div class="phrase-card-inner">
           <div class="phrase-front">
             <div class="phrase-front-word">Hamdullah</div>
             <div class="phrase-front-guide">ham-DOO-lah</div>
+            <button class="pronun-btn" onclick="showPronun(event, this)" data-word="Hamdullah" data-guide="ham-DOO-lah" data-tip="'Ham' like the food, 'doo' like 'do', 'lah' like 'la'. The 'h' is soft, almost silent. Stress the middle: ham-DOO-lah." title="Pronunciation tip">🔊</button>
             <div class="phrase-front-hint">Tap to reveal →</div>
           </div>
           <div class="phrase-back">
@@ -2129,11 +2655,12 @@
         </div>
       </div>
 
-      <div class="phrase-card reveal reveal-delay-3" onclick="this.classList.toggle('flipped')">
+      <div class="phrase-card reveal reveal-delay-3" onclick="flipPhrase(event, this)">
         <div class="phrase-card-inner">
           <div class="phrase-front">
             <div class="phrase-front-word">Shukran</div>
             <div class="phrase-front-guide">SHOOK-ran</div>
+            <button class="pronun-btn" onclick="showPronun(event, this)" data-word="Shukran" data-guide="SHOOK-ran" data-tip="'Shoo' like 'shoe', 'kran' rhymes with 'ran'. Stress the first syllable: SHOOK-ran. This comes directly from Arabic — it's used across the Arab world." title="Pronunciation tip">🔊</button>
             <div class="phrase-front-hint">Tap to reveal →</div>
           </div>
           <div class="phrase-back">
@@ -2143,11 +2670,12 @@
         </div>
       </div>
 
-      <div class="phrase-card reveal reveal-delay-4" onclick="this.classList.toggle('flipped')">
+      <div class="phrase-card reveal reveal-delay-4" onclick="flipPhrase(event, this)">
         <div class="phrase-card-inner">
           <div class="phrase-front">
             <div class="phrase-front-word">Bslama</div>
             <div class="phrase-front-guide">b-SLA-ma</div>
+            <button class="pronun-btn" onclick="showPronun(event, this)" data-word="Bslama" data-guide="b-SLA-ma" data-tip="The 'b' blends into 'sla': b-SLA-ma. Think 'buh-SLAH-mah'. It comes from Arabic 'bi-salamah' meaning 'with peace'." title="Pronunciation tip">🔊</button>
             <div class="phrase-front-hint">Tap to reveal →</div>
           </div>
           <div class="phrase-back">
@@ -2429,28 +2957,28 @@
     <div class="text-center">
       <span class="section-label reveal">Pricing</span>
       <h2 class="section-title reveal reveal-delay-1">Start Your Darija Journey Today</h2>
-      <p class="section-sub reveal reveal-delay-2">Start free, go deeper when you're ready. No subscriptions, no hidden fees.</p>
+      <p class="section-sub reveal reveal-delay-2">One-time payments, lifetime access. No subscriptions, no hidden fees.</p>
     </div>
 
     <div class="pricing-tiers">
 
-      <!-- Free Tier -->
+      <!-- Starter Pack -->
       <div class="tier-card reveal reveal-delay-1">
-        <div class="tier-name">Free Starter Pack</div>
+        <div class="tier-name">Starter Pack</div>
         <div class="tier-price">
           <span class="tier-price-currency">MAD </span>
-          <span class="tier-price-amount">0</span>
+          <span class="tier-price-amount">50</span>
         </div>
-        <div class="tier-price-note">Free forever — no card needed</div>
-        <div class="tier-desc">The essentials to get you started. Perfect for curious learners and travelers planning a trip.</div>
+        <div class="tier-price-note">One-time payment — instant download</div>
+        <div class="tier-desc">The perfect entry point. Get the essential Darija toolkit and join the community of Moroccan Arabic learners worldwide.</div>
         <div class="tier-features">
           <div class="tier-feature"><div class="tier-check">✓</div><span>20 essential Darija phrases PDF</span></div>
           <div class="tier-feature"><div class="tier-check">✓</div><span>Pronunciation guide</span></div>
           <div class="tier-feature"><div class="tier-check">✓</div><span>Cultural tips booklet</span></div>
-          <div class="tier-feature"><div class="tier-check">✓</div><span>Free Discord community access</span></div>
+          <div class="tier-feature"><div class="tier-check">✓</div><span>Community access</span></div>
           <div class="tier-feature"><div class="tier-check">✓</div><span>Weekly Darija newsletter</span></div>
         </div>
-        <a href="https://belditalk.lemonsqueezy.com/checkout/buy/e2395ee0-7003-4747-8dd2-44b782541421" class="tier-cta tier-cta--free lemonsqueezy-button">Download Free →</a>
+        <a href="https://belditalk.lemonsqueezy.com/checkout/buy/e2395ee0-7003-4747-8dd2-44b782541421" class="tier-cta tier-cta--free lemonsqueezy-button">Get Started →</a>
       </div>
 
       <!-- Beginner Course -->
@@ -2464,7 +2992,7 @@
         <div class="tier-price-note">One-time payment — lifetime access &amp; updates</div>
         <div class="tier-desc">The complete beginner roadmap. 197 pages, 12 modules, 1000+ phrases — everything you need to go from zero to conversational.</div>
         <div class="tier-features">
-          <div class="tier-feature"><div class="tier-check">✓</div><span>Everything in Free +</span></div>
+          <div class="tier-feature"><div class="tier-check">✓</div><span>Everything in Starter +</span></div>
           <div class="tier-feature"><div class="tier-check">✓</div><span>197-page "I ❤️ Moroccan Darija" e-book</span></div>
           <div class="tier-feature"><div class="tier-check">✓</div><span>12 structured modules, 3 levels</span></div>
           <div class="tier-feature"><div class="tier-check">✓</div><span>1000+ vocabulary words with transliteration</span></div>
@@ -2583,6 +3111,34 @@
 
 
 <!-- ============================================================
+     DARIJA QUIZ
+============================================================ -->
+<section id="quiz" class="section section--dark">
+  <div style="position:absolute;inset:0;opacity:0.04;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22%3E%3Cg fill=%22none%22 stroke=%22%23D4A24E%22 stroke-width=%220.6%22%3E%3Crect x=%228%22 y=%228%22 width=%2244%22 height=%2244%22 transform=%22rotate(45 30 30)%22/%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%225%22/%3E%3C/g%3E%3C/svg%3E');background-size:60px 60px;pointer-events:none;"></div>
+  <div class="container" style="position:relative;">
+    <div class="text-center">
+      <span class="section-label reveal">Test Your Knowledge</span>
+      <h2 class="section-title reveal reveal-delay-1">How Much Darija Do You Know?</h2>
+      <p class="section-sub reveal reveal-delay-2">Take our 5-question quiz and find out. No preparation needed — just see what you remember from the free lesson!</p>
+    </div>
+
+    <div class="quiz-wrapper reveal reveal-delay-3">
+      <div id="quiz-container">
+        <div class="quiz-progress-row">
+          <span id="quiz-progress">Question 1 of 5</span>
+          <div class="quiz-progress-track"><div class="quiz-progress-bar" id="quiz-progress-bar"></div></div>
+        </div>
+        <div class="quiz-question" id="quiz-question-text"></div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div id="quiz-feedback" class="quiz-feedback"></div>
+        <button class="btn btn-primary quiz-next-btn" id="quiz-next" onclick="nextQuizQuestion()" style="display:none;">Next Question →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
      BLOG / RESOURCES
 ============================================================ -->
 <section id="resources" class="section section--light">
@@ -2596,7 +3152,7 @@
 
     <div class="resources-grid">
 
-      <div class="resource-card reveal">
+      <div class="resource-card reveal" onclick="toggleResource(this)">
         <div class="resource-thumb resource-thumb--orange">
           <div class="resource-thumb-pattern"></div>
           <div class="resource-thumb-icon">🗣️</div>
@@ -2604,37 +3160,74 @@
         </div>
         <div class="resource-body">
           <span class="resource-category">Travel Darija</span>
-          <h3>10 Essential Phrases Every Morocco Traveler Needs</h3>
-          <p>Survive and thrive in Morocco with these must-know expressions. From greetings to emergencies — all phonetically written for instant use.</p>
-          <a href="#" class="resource-link">Read Free Guide →</a>
+          <h3>10 Must-Know Darija Phrases for Travelers</h3>
+          <p>Even knowing a few phrases transforms your Morocco experience — locals light up when you try their language.</p>
+          <span class="resource-link">Read Guide ↓</span>
+        </div>
+        <div class="resource-expanded">
+          <ol class="resource-list">
+            <li><strong>Salam</strong> <em>(sa-LAHM)</em> — Hello</li>
+            <li><strong>Shukran bzzaf</strong> <em>(shook-RAN b-ZAHF)</em> — Thank you very much</li>
+            <li><strong>Chhal?</strong> <em>(sh-HALL)</em> — How much?</li>
+            <li><strong>Fin kayna...?</strong> <em>(FIN KAY-na)</em> — Where is...?</li>
+            <li><strong>Bghit hadshi</strong> <em>(b-HEIT had-SHI)</em> — I want this</li>
+            <li><strong>La, shukran</strong> <em>(LA shook-RAN)</em> — No, thank you</li>
+            <li><strong>Wahed atay, afak</strong> <em>(WAH-hed a-TAY, a-FAK)</em> — One tea, please</li>
+            <li><strong>Mezyan bzzaf</strong> <em>(mez-YAN b-ZAHF)</em> — Very good</li>
+            <li><strong>Bslama</strong> <em>(b-SLA-ma)</em> — Goodbye</li>
+            <li><strong>3afak, fin lhammam?</strong> <em>(AH-fak, fin l-ham-MAM)</em> — Excuse me, where is the bathroom?</li>
+          </ol>
+          <p style="margin-top:12px;font-style:italic;">Tip: Moroccans appreciate any effort to speak Darija — even a single word earns a smile.</p>
         </div>
       </div>
 
-      <div class="resource-card reveal reveal-delay-1">
+      <div class="resource-card reveal reveal-delay-1" onclick="toggleResource(this)">
         <div class="resource-thumb resource-thumb--blue">
           <div class="resource-thumb-pattern"></div>
           <div class="resource-thumb-icon">🕌</div>
-          <span class="resource-badge">Coming Soon</span>
+          <span class="resource-badge">Free Guide</span>
         </div>
         <div class="resource-body">
-          <span class="resource-category">Culture</span>
-          <h3>Understanding Moroccan Culture Through Language</h3>
-          <p>Language is culture. Explore how Darija reflects Morocco's unique Amazigh, Arab, and Mediterranean heritage in every sentence.</p>
-          <a href="#" class="resource-link">Coming Soon →</a>
+          <span class="resource-category">Linguistics</span>
+          <h3>Why Darija is NOT Standard Arabic</h3>
+          <p>Many learners are surprised to find they can't understand Moroccan conversations despite knowing Modern Standard Arabic. Here's why.</p>
+          <span class="resource-link">Read Guide ↓</span>
+        </div>
+        <div class="resource-expanded">
+          <p><strong>Darija is a fully independent language</strong>, not "bad Arabic." Here's what makes it unique:</p>
+          <ul class="resource-list">
+            <li><strong>Amazigh roots:</strong> About 40% of vocabulary comes from Tamazight (Berber), the indigenous language of Morocco.</li>
+            <li><strong>French infiltration:</strong> Words like "machine" (car), "bureau" (office), and "portable" (phone) are everyday Darija.</li>
+            <li><strong>Spanish echoes:</strong> Northern Morocco absorbed words from Spanish — you'll hear traces in food, tools, and daily life.</li>
+            <li><strong>Phonetic compression:</strong> Darija contracts heavily. "I don't know" = <em>Ma 3arftsh</em> — classical Arabic words fused and shortened over centuries.</li>
+            <li><strong>No official writing:</strong> Darija has no standardized spelling — it's an oral language, often written in "Franco-Arabe" (Latin letters + numbers for Arabic sounds like 3, 7, 9).</li>
+          </ul>
+          <p style="margin-top:12px;font-style:italic;">Bottom line: if you want to connect with real Moroccans, you need Darija — not MSA.</p>
         </div>
       </div>
 
-      <div class="resource-card reveal reveal-delay-2">
+      <div class="resource-card reveal reveal-delay-2" onclick="toggleResource(this)">
         <div class="resource-thumb resource-thumb--green">
           <div class="resource-thumb-pattern"></div>
           <div class="resource-thumb-icon">🌅</div>
-          <span class="resource-badge">Coming Soon</span>
+          <span class="resource-badge">Free Guide</span>
         </div>
         <div class="resource-body">
-          <span class="resource-category">Beginner</span>
-          <h3>Your First Day Speaking Darija — A Beginner's Script</h3>
-          <p>A ready-to-use script for your very first conversation in Darija. Practice out loud, build confidence, and impress locals from day one.</p>
-          <a href="#" class="resource-link">Coming Soon →</a>
+          <span class="resource-category">Culture</span>
+          <h3>Moroccan Culture: What to Know Before Your Trip</h3>
+          <p>Morocco is a country of beautiful contrasts. These cultural insights will help you travel with respect and genuine connection.</p>
+          <span class="resource-link">Read Guide ↓</span>
+        </div>
+        <div class="resource-expanded">
+          <ul class="resource-list">
+            <li><strong>Tea is a ceremony:</strong> Moroccan mint tea (atay) is poured from a height to create foam. Always accept when offered — refusing is considered rude.</li>
+            <li><strong>Dress modestly in medinas:</strong> Cover shoulders and knees in markets, mosques, and rural areas. This applies to all genders.</li>
+            <li><strong>Bargaining is expected:</strong> In souks, vendors price expecting negotiation. Start at 40% of asking price, smile, and walk away — they'll often call you back.</li>
+            <li><strong>"Inshallah" means maybe:</strong> When a Moroccan says "God willing" to confirm plans, treat it as uncertain. It reflects a genuine cultural worldview, not dishonesty.</li>
+            <li><strong>Hospitality is genuine:</strong> If invited to a Moroccan home, expect abundant food. Say "no" to a second helping — they'll insist three times, then you accept.</li>
+            <li><strong>Friday rhythms:</strong> Many shops close midday Friday for prayers. Plan accordingly in smaller towns and medinas.</li>
+          </ul>
+          <p style="margin-top:12px;font-style:italic;">Learning even a few Darija phrases before your visit shows respect and opens doors no guidebook can open.</p>
         </div>
       </div>
 
@@ -2813,8 +3406,8 @@
     </p>
 
     <div class="final-cta-actions reveal reveal-delay-3">
-      <a href="https://belditalk.lemonsqueezy.com/checkout/buy/476e9db3-3cd2-4c17-bc67-251371f837e4" class="btn btn-primary btn-lg lemonsqueezy-button">Get Started — MAD 290 →</a>
-      <a href="https://belditalk.lemonsqueezy.com/checkout/buy/e2395ee0-7003-4747-8dd2-44b782541421" class="btn btn-outline btn-lg lemonsqueezy-button">Download Free Starter Pack</a>
+      <a href="https://belditalk.lemonsqueezy.com/checkout/buy/476e9db3-3cd2-4c17-bc67-251371f837e4" class="btn btn-primary btn-lg lemonsqueezy-button">Get the Full Course — MAD 290 →</a>
+      <a href="https://belditalk.lemonsqueezy.com/checkout/buy/e2395ee0-7003-4747-8dd2-44b782541421" class="btn btn-outline btn-lg lemonsqueezy-button">Get Started — MAD 50 →</a>
     </div>
 
     <div class="final-cta-or reveal reveal-delay-4">— or get free weekly lessons —</div>
@@ -2839,24 +3432,15 @@
 
       <div class="footer-brand">
         <div class="footer-logo">
-          <img src="images/logo-nobg.png" alt="Belditalk" />
+          <img src="images/logo-new.svg" alt="Belditalk" style="height:36px;width:auto;" />
           <span class="footer-logo-text">Beldi<span>talk</span>.com</span>
         </div>
         <p class="footer-tagline">
           The world's most accessible Moroccan Darija academy — connecting language learners to Morocco's living culture.
         </p>
         <div class="footer-socials">
-          <a href="#" class="footer-social" title="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </a>
-          <a href="#" class="footer-social" title="TikTok">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.17 8.17 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/></svg>
-          </a>
-          <a href="#" class="footer-social" title="YouTube">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-          </a>
-          <a href="#" class="footer-social" title="Discord">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          <a href="mailto:belditalk212@gmail.com" class="footer-social" title="Email us">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
         </div>
       </div>
@@ -2875,19 +3459,18 @@
         <h4>Community</h4>
         <div class="footer-links">
           <a href="#signup">Join Newsletter</a>
-          <a href="#">Discord Community</a>
-          <a href="#">Live Sessions</a>
           <a href="#testimonials">Student Stories</a>
+          <a href="#free-lesson">Free Lesson</a>
+          <a href="#quiz">Quiz</a>
         </div>
       </div>
 
       <div class="footer-col">
         <h4>Info</h4>
         <div class="footer-links">
-          <a href="#">About Elias</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
-          <a href="#">Contact</a>
+          <a href="mailto:belditalk212@gmail.com">Contact Us</a>
         </div>
       </div>
 
@@ -2903,6 +3486,41 @@
 
 <!-- Back to Top -->
 <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/212600000000" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat with us on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Progress Indicator -->
+<div class="progress-widget" id="progress-widget">
+  <div class="progress-widget-inner">
+    <span class="progress-widget-label">Explored</span>
+    <div class="progress-widget-bar">
+      <div class="progress-widget-fill" id="progress-fill"></div>
+    </div>
+    <span class="progress-widget-pct" id="progress-text">0%</span>
+  </div>
+</div>
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-banner-inner">
+    <span>🍪 We use cookies to improve your experience. By continuing, you agree to our use of analytics.</span>
+    <div class="cookie-banner-actions">
+      <button class="btn btn-primary" style="padding:8px 20px;font-size:0.85rem;" onclick="acceptCookies()">Accept</button>
+      <button style="background:none;border:none;color:rgba(255,255,255,0.5);cursor:pointer;font-size:0.82rem;" onclick="document.getElementById('cookie-banner').remove()">Dismiss</button>
+    </div>
+  </div>
+</div>
+
+<!-- Pronunciation Popup -->
+<div class="pronun-popup" id="pronun-popup">
+  <button class="pronun-popup-close" onclick="document.getElementById('pronun-popup').classList.remove('visible')">✕</button>
+  <div class="pronun-popup-word" id="pronun-word"></div>
+  <div class="pronun-popup-guide" id="pronun-guide"></div>
+  <div class="pronun-popup-tip" id="pronun-tip"></div>
+</div>
 
 
 <!-- ============================================================
@@ -3037,6 +3655,261 @@
       }
     });
   });
+
+  /* ---- DARK MODE ---- */
+  const darkToggle = document.getElementById('darkToggle');
+  function setTheme(dark) {
+    document.documentElement.classList.toggle('dark-mode', dark);
+    if (darkToggle) darkToggle.textContent = dark ? '☀️' : '🌙';
+    localStorage.setItem('belditalk_theme', dark ? 'dark' : 'light');
+  }
+  const savedTheme = localStorage.getItem('belditalk_theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(savedTheme === 'dark' || (!savedTheme && prefersDark));
+  if (darkToggle) darkToggle.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark-mode')));
+
+  /* ---- ANIMATED COUNTERS ---- */
+  function animateCounter(el) {
+    const raw = el.textContent.trim();
+    const target = parseInt(raw.replace(/\D/g, ''));
+    const suffix = raw.replace(/[\d]/g, '');
+    if (!target) return;
+    let current = 0;
+    const duration = 1200;
+    const steps = 60;
+    const increment = target / steps;
+    let step = 0;
+    el.dataset.original = raw;
+    const timer = setInterval(() => {
+      step++;
+      current = Math.min(Math.round(increment * step), target);
+      el.textContent = current + suffix;
+      if (step >= steps) clearInterval(timer);
+    }, duration / steps);
+  }
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.dataset.counted) {
+        entry.target.dataset.counted = '1';
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.hero-stat-num, .about-stat-num').forEach(el => counterObserver.observe(el));
+
+  /* ---- ANALYTICS ---- */
+  const ANALYTICS_KEY = 'belditalk_analytics';
+  function getAnalytics() {
+    try { return JSON.parse(localStorage.getItem(ANALYTICS_KEY)) || {}; } catch { return {}; }
+  }
+  function saveAnalytics(data) {
+    try { localStorage.setItem(ANALYTICS_KEY, JSON.stringify(data)); } catch {}
+  }
+  function trackEvent(event, data) {
+    const a = getAnalytics();
+    if (!a.events) a.events = [];
+    a.events.push({ event, data: data || {}, ts: Date.now() });
+    a[event] = (a[event] || 0) + 1;
+    saveAnalytics(a);
+  }
+  (function() {
+    const a = getAnalytics();
+    a.page_views = (a.page_views || 0) + 1;
+    a.last_visit = Date.now();
+    saveAnalytics(a);
+  })();
+  const sectionAnalyticsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        trackEvent('section_view', { section: entry.target.id });
+        sectionAnalyticsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('section[id]').forEach(s => sectionAnalyticsObserver.observe(s));
+  const pageStartTime = Date.now();
+  window.addEventListener('beforeunload', () => {
+    const a = getAnalytics();
+    a.total_time_seconds = (a.total_time_seconds || 0) + Math.round((Date.now() - pageStartTime) / 1000);
+    saveAnalytics(a);
+  });
+
+  /* ---- ADMIN PANEL (Ctrl+Shift+A) ---- */
+  function exportAnalytics() {
+    const data = JSON.stringify(getAnalytics(), null, 2);
+    const blob = new Blob([data], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'belditalk_analytics.json'; a.click();
+    URL.revokeObjectURL(url);
+  }
+  function clearAnalytics() {
+    if (confirm('Clear all analytics data?')) {
+      localStorage.removeItem(ANALYTICS_KEY);
+      const p = document.getElementById('admin-panel');
+      if (p) p.remove();
+    }
+  }
+  function showAdminPanel() {
+    const existing = document.getElementById('admin-panel');
+    if (existing) { existing.remove(); return; }
+    const d = getAnalytics();
+    const mins = Math.round((d.total_time_seconds || 0) / 60);
+    const panel = document.createElement('div');
+    panel.id = 'admin-panel';
+    panel.className = 'admin-panel';
+    panel.innerHTML = `
+      <div class="admin-panel-header">
+        <h3>📊 Analytics Dashboard</h3>
+        <button onclick="document.getElementById('admin-panel').remove()">✕</button>
+      </div>
+      <div class="admin-stats">
+        <div class="admin-stat"><strong>Page Views:</strong> ${d.page_views || 0}</div>
+        <div class="admin-stat"><strong>Quiz Completions:</strong> ${d.quiz_complete || 0}</div>
+        <div class="admin-stat"><strong>Button Clicks:</strong> ${d.button_click || 0}</div>
+        <div class="admin-stat"><strong>Section Views:</strong> ${d.section_view || 0}</div>
+        <div class="admin-stat"><strong>Time on Page:</strong> ${mins} min</div>
+        <div class="admin-stat"><strong>Last Visit:</strong> ${d.last_visit ? new Date(d.last_visit).toLocaleString() : 'N/A'}</div>
+      </div>
+      <div class="admin-btn-row">
+        <button class="btn btn-secondary" onclick="exportAnalytics()" style="padding:8px 16px;font-size:0.82rem;">Export JSON</button>
+        <button class="btn-outline-dark" onclick="clearAnalytics()" style="padding:8px 16px;font-size:0.82rem;">Clear Data</button>
+      </div>
+    `;
+    document.body.appendChild(panel);
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.shiftKey && e.key === 'A') { e.preventDefault(); showAdminPanel(); }
+  });
+
+  /* ---- QUIZ ---- */
+  const quizData = [
+    { q: 'What does "Labas?" mean in Darija?', opts: ['Thank you','How are you?','Goodbye','Good morning'], correct: 1, tip: 'Labas? is the most common greeting in Moroccan streets — you\'ll hear it dozens of times a day!' },
+    { q: 'How do you say "Thank you" in Darija?', opts: ['Salam','Hamdullah','Shukran','Bslama'], correct: 2, tip: 'Shukran comes from Arabic — it\'s used across the Arab world and is one of the first words every traveler should learn.' },
+    { q: 'What is "Chhal?" used for in Moroccan markets?', opts: ['Saying hello','Asking how much something costs','Asking for directions','Saying goodbye'], correct: 1, tip: 'Chhal? is your souk superpower — knowing this word lets you negotiate anywhere in Morocco!' },
+    { q: 'What does "Safi" mean in everyday Darija?', opts: ['Beautiful','Very good','Alright / Done','Nothing'], correct: 2, tip: '"Safi" is like the Moroccan "OK" — you\'ll hear it to confirm plans, end conversations, and wrap up transactions.' },
+    { q: 'Which phrase means "I want tea"?', opts: ['Fin kayna?','Walu','Daba','Bghit atay'], correct: 3, tip: 'Bghit = I want, Atay = tea. Say this in any café and watch the magic happen — Moroccan hospitality is legendary!' }
+  ];
+  let qCurrent = 0, qScore = 0;
+  function renderQuiz() {
+    const q = quizData[qCurrent];
+    const el = document.getElementById('quiz-question-text');
+    const prog = document.getElementById('quiz-progress');
+    const bar = document.getElementById('quiz-progress-bar');
+    const opts = document.getElementById('quiz-options');
+    const fb = document.getElementById('quiz-feedback');
+    const nxt = document.getElementById('quiz-next');
+    if (!el) return;
+    el.textContent = q.q;
+    prog.textContent = 'Question ' + (qCurrent + 1) + ' of ' + quizData.length;
+    bar.style.width = ((qCurrent / quizData.length) * 100) + '%';
+    fb.textContent = '';
+    fb.className = 'quiz-feedback';
+    if (nxt) nxt.style.display = 'none';
+    opts.innerHTML = q.opts.map((opt, i) =>
+      '<button class="quiz-option" onclick="selectAnswer(' + i + ')">' + opt + '</button>'
+    ).join('');
+  }
+  function selectAnswer(idx) {
+    const q = quizData[qCurrent];
+    const buttons = document.querySelectorAll('.quiz-option');
+    buttons.forEach((btn, i) => {
+      btn.disabled = true;
+      if (i === q.correct) btn.classList.add('correct');
+      else if (i === idx) btn.classList.add('wrong');
+    });
+    const fb = document.getElementById('quiz-feedback');
+    const nxt = document.getElementById('quiz-next');
+    if (idx === q.correct) {
+      qScore++;
+      fb.textContent = '✓ Correct! ' + q.tip;
+      fb.className = 'quiz-feedback correct';
+    } else {
+      fb.textContent = '✗ Not quite. ' + q.tip;
+      fb.className = 'quiz-feedback wrong';
+    }
+    if (nxt) nxt.style.display = 'inline-flex';
+    trackEvent('quiz_answer', { q: qCurrent + 1, correct: idx === q.correct });
+  }
+  function nextQuizQuestion() {
+    qCurrent++;
+    if (qCurrent < quizData.length) {
+      renderQuiz();
+    } else {
+      const pct = Math.round((qScore / quizData.length) * 100);
+      const msg = pct === 100 ? 'Perfect! You\'re a natural Darija speaker!' : pct >= 80 ? 'Excellent! You\'ve got real potential.' : pct >= 60 ? 'Good start! A bit more practice and you\'ll ace it.' : 'Keep learning — you\'re just getting started!';
+      const container = document.getElementById('quiz-container');
+      container.innerHTML = '<div class="quiz-result"><div class="quiz-result-score">' + qScore + '/' + quizData.length + '</div><div class="quiz-result-msg">' + msg + '</div><div class="quiz-result-pct">' + pct + '% correct</div><div class="quiz-result-actions"><button class="btn btn-primary" onclick="restartQuiz()">Try Again</button><button class="btn-outline-dark" onclick="shareScore(' + qScore + ',' + quizData.length + ')">📋 Share Score</button></div></div>';
+      trackEvent('quiz_complete', { score: qScore, total: quizData.length });
+    }
+  }
+  function restartQuiz() {
+    qCurrent = 0; qScore = 0;
+    const container = document.getElementById('quiz-container');
+    container.innerHTML = '<div class="quiz-progress-row"><span id="quiz-progress">Question 1 of 5</span><div class="quiz-progress-track"><div class="quiz-progress-bar" id="quiz-progress-bar"></div></div></div><div class="quiz-question" id="quiz-question-text"></div><div class="quiz-options" id="quiz-options"></div><div id="quiz-feedback" class="quiz-feedback"></div><button class="btn btn-primary quiz-next-btn" id="quiz-next" onclick="nextQuizQuestion()" style="display:none;">Next Question →</button>';
+    renderQuiz();
+  }
+  function shareScore(score, total) {
+    const text = 'I scored ' + score + '/' + total + ' on the Belditalk Darija Quiz! 🇲🇦 Test your Moroccan Arabic at belditalk.com';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => alert('Score copied to clipboard! Share it anywhere.'));
+    } else {
+      prompt('Copy this:', text);
+    }
+  }
+  renderQuiz();
+
+  /* ---- PRONUNCIATION POPUP ---- */
+  function flipPhrase(e, el) {
+    if (e.target.closest('.pronun-btn')) return;
+    el.classList.toggle('flipped');
+  }
+  function showPronun(e, btn) {
+    e.stopPropagation();
+    const popup = document.getElementById('pronun-popup');
+    document.getElementById('pronun-word').textContent = btn.dataset.word;
+    document.getElementById('pronun-guide').textContent = btn.dataset.guide;
+    document.getElementById('pronun-tip').textContent = btn.dataset.tip;
+    popup.classList.add('visible');
+    trackEvent('pronun_click', { word: btn.dataset.word });
+    setTimeout(() => popup.classList.remove('visible'), 6000);
+  }
+
+  /* ---- PROGRESS INDICATOR ---- */
+  const progressWidget = document.getElementById('progress-widget');
+  const progressFill = document.getElementById('progress-fill');
+  const progressText = document.getElementById('progress-text');
+  const allSections = Array.from(document.querySelectorAll('section[id]'));
+  const sectionsViewed = new Set();
+  const progressObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) sectionsViewed.add(entry.target.id);
+    });
+    const pct = Math.round((sectionsViewed.size / allSections.length) * 100);
+    if (progressFill) progressFill.style.width = pct + '%';
+    if (progressText) progressText.textContent = pct + '%';
+    if (progressWidget && pct > 0) progressWidget.classList.add('visible');
+  }, { threshold: 0.3 });
+  allSections.forEach(s => progressObs.observe(s));
+
+  /* ---- COOKIE CONSENT ---- */
+  if (!localStorage.getItem('belditalk_cookie_consent')) {
+    const banner = document.getElementById('cookie-banner');
+    if (banner) setTimeout(() => banner.classList.add('visible'), 1500);
+  }
+  function acceptCookies() {
+    localStorage.setItem('belditalk_cookie_consent', '1');
+    const banner = document.getElementById('cookie-banner');
+    if (banner) { banner.classList.remove('visible'); setTimeout(() => banner.remove(), 400); }
+  }
+
+  /* ---- EXPANDABLE RESOURCE CARDS ---- */
+  function toggleResource(card) {
+    card.classList.toggle('open');
+    const link = card.querySelector('.resource-link');
+    if (link) link.textContent = card.classList.contains('open') ? 'Close ↑' : 'Read Guide ↓';
+  }
 </script>
 
 
