@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#FAFAFA;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:'Inter',sans-serif;padding:40px}
+.post{width:1080px;height:1080px;background:#FFFFFF;border-radius:40px;padding:60px;display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:0 32px 64px rgba(0,0,0,0.06);border:1px solid #E8E8E8}
+.accent-shape{position:absolute;bottom:0;left:0;right:0;height:300px;background:#DFFF57;clip-path:ellipse(120% 80% at 50% 100%);pointer-events:none}
+.ring{position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;border:2px solid rgba(223,255,87,0.3);pointer-events:none}
+.ring2{position:absolute;top:-40px;right:-40px;width:220px;height:220px;border-radius:50%;border:1px solid rgba(0,230,200,0.12);pointer-events:none}
+.top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:auto}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;letter-spacing:-0.5px;color:#0A0A0A}
+.badge{background:#0A0A0A;color:#DFFF57;padding:4px 12px;border-radius:100px;font-size:11px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.content{flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0;position:relative;z-index:2}
+.main-word{font-family:'Space Grotesk',sans-serif;font-size:96px;font-weight:700;line-height:1;letter-spacing:-0.04em;color:#0A0A0A;margin-bottom:16px}
+.sub-text{font-size:24px;color:#555;font-weight:500;margin-bottom:32px}
+.stats-row{display:flex;gap:40px;margin-top:16px}
+.stat{text-align:left}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A}
+.stat-label{font-size:13px;color:#555;margin-top:2px}
+.cta{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:24px}
+.cta-button{padding:14px 32px;background:#0A0A0A;color:#FFFFFF;border-radius:100px;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer}
+.cta-url{font-size:13px;color:#555;letter-spacing:0.3px}
+.footer-tag{font-size:12px;color:#888;letter-spacing:0.5px;position:relative;z-index:2}
+</style></head><body>
+<div class="post">
+  <div class="accent-shape"></div>
+  <div class="ring"></div>
+  <div class="ring2"></div>
+  <div class="top">
+    <div class="logo">BeldiTalk ←</div>
+    <div class="badge">Limited Offer</div>
+  </div>
+  <div class="content">
+    <div class="main-word">Speak Darija</div>
+    <div class="sub-text">12 Modules - 197 Pages - 1K+ Phrases</div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">197</div><div class="stat-label">Pages</div></div>
+      <div class="stat"><div class="stat-num">12</div><div class="stat-label">Modules</div></div>
+      <div class="stat"><div class="stat-num">1K+</div><div class="stat-label">Phrases</div></div>
+    </div>
+  </div>
+  <div class="cta">
+    <div class="cta-button">Get the Course</div>
+    <div class="cta-url">belditalk.com</div>
+  </div>
+  <div class="footer-tag" style="margin-top:16px">#LearnDarija #Morocco #BeldiTalk</div>
+</div></body></html>

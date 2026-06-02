@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#FAFAFA;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:'Inter',sans-serif;padding:40px}
+.post{width:1080px;height:1080px;background:#FFFFFF;border-radius:40px;padding:60px;display:flex;flex-direction:column;position:relative;overflow:hidden;box-shadow:0 32px 64px rgba(0,0,0,0.06);border:1px solid #E8E8E8}
+.accent-bg{position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(223,255,87,0.12) 0%,transparent 70%);pointer-events:none}
+.accent-ring{position:absolute;top:60px;right:60px;width:200px;height:200px;border-radius:50%;border:1px solid rgba(223,255,87,0.4);pointer-events:none}
+.accent-ring:nth-child(2){top:80px;right:80px;width:160px;height:160px;border-color:rgba(0,230,200,0.15)}
+.label{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#555;margin-bottom:auto}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#0A0A0A;margin-bottom:8px;letter-spacing:-0.5px}
+.badge{display:inline-flex;align-items:center;gap:6px;background:#DFFF57;padding:6px 16px;border-radius:100px;font-size:13px;font-weight:600;margin-top:auto;margin-bottom:24px;width:fit-content;color:#0A0A0A}
+.darija-word{font-family:'Space Grotesk',sans-serif;font-size:96px;font-weight:700;color:#0A0A0A;letter-spacing:-0.03em;line-height:1;margin-bottom:8px}
+.pronunciation{font-size:20px;color:#555;font-weight:500;margin-bottom:4px}
+.meaning{font-size:24px;color:#0A0A0A;font-weight:600;font-family:'Space Grotesk',sans-serif;margin-bottom:auto}
+.example{font-size:16px;color:#555;line-height:1.6;margin-top:24px;padding:16px 20px;border-radius:16px;background:rgba(0,230,200,0.06);border:1px solid rgba(0,230,200,0.1)}
+.cta{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#0A0A0A;margin-top:24px}
+.separator{height:1px;background:#E8E8E8;margin:16px 0}
+.footer{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:24px;border-top:1px solid #E8E8E8}
+.footer span{font-size:13px;color:#555}
+.hashtags{font-size:12px;color:#888;letter-spacing:0.5px}
+</style></head><body>
+<div class="post">
+  <div class="accent-bg"></div>
+  <div class="accent-ring"></div>
+  <div class="accent-ring"></div>
+  <div class="logo">BeldiTalk ←</div>
+  <div class="label">Darija Word of the Day</div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:40px 0">
+    <div class="darija-word">سلام</div>
+    <div class="pronunciation">Salam</div>
+    <div class="meaning">Hello / Peace</div>
+    <div class="example">First word you will use in Morocco</div>
+  </div>
+  <div class="badge">↻ Learn one word a day</div>
+  <div class="footer">
+    <span>belditalk.com 🇲🇦</span>
+    <span class="hashtags">#LearnDarija #Morocco #BeldiTalk</span>
+  </div>
+</div></body></html>

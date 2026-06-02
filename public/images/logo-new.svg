@@ -1,58 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" width="360" height="90">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
   <defs>
-    <clipPath id="bubble-clip">
-      <path d="M4,4 h28 a4,4 0 0 1 4,4 v18 a4,4 0 0 1 -4,4 h-16 l-5,5 v-5 h-7 a4,4 0 0 1 -4,-4 v-18 a4,4 0 0 1 4,-4 z"/>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DFFF57"/>
+      <stop offset="100%" stop-color="#b0d040"/>
+    </linearGradient>
+    <clipPath id="bubbleClip">
+      <path d="M0,0 h40 v32 H14 l-8,8 v-8 H0 V0 Z"/>
     </clipPath>
   </defs>
 
-  <!-- Speech bubble icon with zellige pattern -->
-  <g transform="translate(8, 14)">
-    <!-- Bubble background -->
-    <path d="M4,4 h28 a4,4 0 0 1 4,4 v18 a4,4 0 0 1 -4,4 h-16 l-5,5 v-5 h-7 a4,4 0 0 1 -4,-4 v-18 a4,4 0 0 0 4,-4 z" fill="#1B4965"/>
-    
-    <!-- Zellige geometric pattern inside bubble -->
-    <g clip-path="url(#bubble-clip)" opacity="0.35">
-      <!-- 8-pointed star pattern -->
-      <g fill="none" stroke="#D4A24E" stroke-width="0.6">
-        <!-- Row 1 -->
-        <polygon points="10,8 12,6 14,8 12,10"/>
-        <polygon points="11,7 10,8 12,10 13,9" fill="#D4A24E" fill-opacity="0.3"/>
-        <polygon points="18,8 20,6 22,8 20,10"/>
-        <polygon points="19,7 18,8 20,10 21,9" fill="#D4A24E" fill-opacity="0.3"/>
-        <polygon points="26,8 28,6 30,8 28,10"/>
-        <polygon points="27,7 26,8 28,10 29,9" fill="#D4A24E" fill-opacity="0.3"/>
-        <!-- Row 2 -->
-        <polygon points="6,14 8,12 10,14 8,16"/>
-        <polygon points="14,14 16,12 18,14 16,16"/>
-        <polygon points="22,14 24,12 26,14 24,16"/>
-        <polygon points="30,14 32,12 34,14 32,16"/>
-        <!-- Row 3 -->
-        <polygon points="10,20 12,18 14,20 12,22"/>
-        <polygon points="18,20 20,18 22,20 20,22"/>
-        <polygon points="26,20 28,18 30,20 28,22"/>
-        <!-- Row 4 -->
-        <polygon points="6,26 8,24 10,26 8,28"/>
-        <polygon points="14,26 16,24 18,26 16,28"/>
-        <polygon points="22,26 24,24 26,26 24,28"/>
-        <polygon points="30,26 32,24 34,26 32,28"/>
-      </g>
-    </g>
-    
-    <!-- Moroccan 8-pointed star centerpiece -->
-    <g transform="translate(18, 16)">
-      <polygon points="0,-5 1.4,-1.4 5,0 1.4,1.4 0,5 -1.4,1.4 -5,0 -1.4,-1.4" fill="#D4A24E" opacity="0.9"/>
-      <polygon points="0,-3.5 3.5,0 0,3.5 -3.5,0" fill="#C75B2F" opacity="0.7"/>
-      <circle cx="0" cy="0" r="1.2" fill="#D4A24E"/>
-    </g>
+  <!-- Brutalist speech bubble icon -->
+  <g transform="translate(4, 24)">
+    <!-- Bubble body — sharp corners, brutalist -->
+    <path d="M0,0 h40 v32 H14 l-8,8 v-8 H0 V0 Z" fill="#0A0A0A"/>
+    <!-- Neon accent slash inside bubble -->
+    <path d="M8,8 h24 v3 H8 Z" fill="#DFFF57"/>
+    <path d="M8,14 h18 v3 H8 Z" fill="#DFFF57" opacity="0.6"/>
+    <path d="M8,20 h12 v3 H8 Z" fill="#DFFF57" opacity="0.3"/>
   </g>
 
-  <!-- BeldiTalk text -->
-  <text x="56" y="42" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="-0.5">
-    <tspan fill="#1B4965">Beldi</tspan><tspan fill="#C75B2F">Talk</tspan>
+  <!-- BELDITALK — bold slate grotesk style -->
+  <text x="62" y="52" font-family="'Space Grotesk','Inter',system-ui,sans-serif" font-size="38" font-weight="700" letter-spacing="1" fill="#0A0A0A">
+    BELDI
+    <tspan fill="#DFFF57" stroke="#0A0A0A" stroke-width="0.5">TALK</tspan>
   </text>
 
-  <!-- Tagline -->
-  <text x="57" y="58" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#636e72" letter-spacing="1.5">
-    Learn Moroccan Darija
+  <!-- Tagline — uppercase, tight spacing -->
+  <text x="63" y="72" font-family="'Inter',system-ui,sans-serif" font-size="10" font-weight="500" letter-spacing="3" fill="#555" text-transform="uppercase">
+    LEARN MOROCCAN DARIJA
   </text>
+
+  <!-- Small accent dot -->
+  <circle cx="370" cy="46" r="3" fill="#DFFF57"/>
 </svg>
