@@ -17,6 +17,10 @@
       "dest": "/index.html"
     },
     {
+      "src": "^/auth-callback$",
+      "dest": "/auth-callback.html"
+    },
+    {
       "src": "^/(images|social-posts)/(.*)",
       "dest": "/public/$1/$2"
     },
